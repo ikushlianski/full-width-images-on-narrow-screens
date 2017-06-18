@@ -107,6 +107,7 @@ add_action( 'widgets_init', 'ilyaonline_widgets_init' );
 function ilyaonline_scripts() {
 	wp_enqueue_style( 'ilyaonline-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
 	wp_enqueue_script( 'ilyaonline-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ilyaonline-customscripts', get_template_directory_uri() . '/js/ilyaonline.min.js', array('jquery'), '20151215', true );

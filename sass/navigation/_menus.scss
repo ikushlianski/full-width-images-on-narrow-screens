@@ -74,25 +74,26 @@
 	-webkit-box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
+	font-family: 'FontAwesome';
 	content: "";
-	height: 42px;
+	height: 27px;
 	padding: 0;
 	position: absolute;
 	text-transform: lowercase; /* Stop screen readers to read the text as capital letters */
-	top: 3px;
-	right: 0;
-	width: 42px;
+	top: 12px;
+	right: 6px;
+	width: 27px;
 }
 
 .dropdown-toggle:after {
 	color: #333;
-	content: "\f431";
-	font-size: 24px;
-	line-height: 42px;
+	content: "\f078";
+	font-size: 14px;
+	line-height: 27px;
 	position: relative;
 	top: 0;
 	left: 1px;
-	width: 42px;
+	width: 27px;
 }
 
 .dropdown-toggle:hover,
@@ -107,7 +108,7 @@
 }
 
 .dropdown-toggle.toggle-on:after {
-	content: "\f432";
+	content: "\f077";
 }
 
 /* Small menu. */
