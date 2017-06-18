@@ -30,9 +30,9 @@ gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'./libs/jquery/dist/jquery.min.js', // Берем jQuery
 		'./libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'./js/**/*.js' // Берем Magnific Popup
+		'./js/ilyaonline.js' // Берем ilyaonline.js неминифицированный
 		])
-		.pipe(concat('ilyaonline.min.js')) // Собираем их в кучу в новом файле libs.min.js
+		.pipe(concat('ilyaonline.min.js')) // Собираем их в кучу в новом файле ilyaonline.min.js
 		.pipe(uglify()) // Сжимаем JS файл
 		.pipe(gulp.dest('./js')); // Выгружаем в папку app/js
 });
