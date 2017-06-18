@@ -107,8 +107,14 @@ add_action( 'widgets_init', 'ilyaonline_widgets_init' );
 function ilyaonline_scripts() {
 	wp_enqueue_style( 'ilyaonline-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'ilyaonline-allscripts', get_template_directory_uri() . '/js/ilyaonline.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'ilyaonline-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'ilyaonline-customscripts', get_template_directory_uri() . '/js/ilyaonline.min.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'ilyaonline-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script( 'ilyaonline-navigation', 'screenReaderText', array(
+		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'ilyaonline' ) . '</span>',
+		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'ilyaonline' ) . '</span>',
+	) );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
