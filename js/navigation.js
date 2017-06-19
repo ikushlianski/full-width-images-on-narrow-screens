@@ -132,7 +132,8 @@
 	$(window).click(function(event) {
 		var otherFirstLevelSubmenus = $("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu.toggled-on");
 		var target = $( event.target );
-		if(!target.is(".dropdown-toggle")) {
+
+		if(!target.is(".dropdown-toggle") && ($(".menu-toggle").css("display") == "none")) {
 			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
 			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
 		};
@@ -163,13 +164,13 @@
 		if ($(this).scrollTop() >= position) {
 			direction = "down";
 			if (direction !==previous) {
-				$(".menu-toggle").addClass('hide');
+				$(".menu-toggle").addClass('ishidden');
 				previous = direction;
 			}
 		} else {
 			direction = "up";
 			if (direction !== previous) {
-				$(".menu-toggle").removeClass("hide");
+				$(".menu-toggle").removeClass("ishidden");
 				previous = direction;
 			}
 		}

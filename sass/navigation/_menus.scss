@@ -136,10 +136,10 @@
 	color: white;
 	transition: all 0.2s ease-in;
 }
-.menu-toggle.hide {
+.menu-toggle.ishidden {
 	bottom: -3em;
 }
-.toggled .menu-toggle.hide{
+.toggled .menu-toggle.ishidden{
 	bottom: 1em;
 }
 .main-navigation.toggled {
