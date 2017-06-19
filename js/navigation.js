@@ -6,10 +6,10 @@
  */
 ( function( $ ) {
 
-	$(document).ready(function(){
-		$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
-		$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
-	});
+	// $(document).ready(function(){
+	// 	$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
+	// 	$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
+	// });
 
 	var container, button, menu, links, i, len;
 
@@ -129,6 +129,20 @@
 			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		} );
 	}
+	$(window).click(function(event) {
+		var otherFirstLevelSubmenus = $("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu.toggled-on");
+		var target = $( event.target );
+		if(!target.is(".dropdown-toggle")) {
+			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
+			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
+		};
+		if (target.is(".dropdown-toggle") && (otherFirstLevelSubmenus.length > 1)) {
+			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
+			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
+			$(event.target).addClass("toggle-on");
+			$(event.target).siblings(".sub-menu").addClass("toggled-on");
+		}
+	});
 	initMainNavigation( $( '.main-navigation' ) );
 
 	// Re-initialize the main navigation when it is updated, persisting any existing submenu expanded states.
