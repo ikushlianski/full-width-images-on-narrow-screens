@@ -105,6 +105,7 @@ add_action( 'widgets_init', 'ilyaonline_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ilyaonline_scripts() {
+	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style( 'ilyaonline-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
@@ -112,6 +113,7 @@ function ilyaonline_scripts() {
 
 	wp_enqueue_script( 'ilyaonline-customscripts', get_template_directory_uri() . '/js/ilyaonline.min.js', array('jquery'), '20151215', true );
 	wp_enqueue_script( 'ilyaonline-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_enqueue_script('bootstrap-scripts', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20151215', true);
 	wp_localize_script( 'ilyaonline-navigation', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'ilyaonline' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'ilyaonline' ) . '</span>',
