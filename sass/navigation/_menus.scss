@@ -208,9 +208,6 @@
 		display: inline-block;
 		border:none;
 	}
-	.main-navigation ul ul {
-		outline: 1px solid #333;
-	}
 	/* left-align dropdown menu items */
 	.main-navigation li li {
 		display: block;
@@ -257,7 +254,17 @@
 		position: relative;
 		width: 30px;
 	}
-
+	.dropdown-toggle:hover:after {
+		color: white;
+	}
+	.dropdown-toggle:hover,
+	.dropdown-toggle:focus {
+		background-color: darken($color__secondary, 10%);
+	}
+	.dropdown-toggle:focus:after {
+		background-color: darken($color__secondary, 10%);
+		color: white;
+	}
 	.dropdown-toggle,
 	.dropdown-toggle.toggle-on,
 	.toggled-on .dropdown-toggle {
