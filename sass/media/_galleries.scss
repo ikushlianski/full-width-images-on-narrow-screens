@@ -37,10 +37,13 @@
 	}
 
 	.gallery-columns-9 & {
-		max-width: 11.11%;
+		max-width: 8%; /* set any size you want. 8% is decent for dm.by */
 	}
 }
 
 .gallery-caption {
 	display: block;
+}
+figure.gallery-item {
+    margin: 0.1em 0.1em;
 }
