@@ -1,6 +1,7 @@
 /**
- * File navigation.js.
+File navigation.js.
  */
+ ```
 ( function( $ ) {
 
 	// ...other code
@@ -19,3 +20,4 @@
 	});
 
 } )(jQuery);
+```
