@@ -1,6 +1,8 @@
-/**
-File navigation.js.
- */
+
+File navigation.js
+
+Place this code into your JS file and remember to add CSS class ".extra-wide-img" to all images you want to make full-screen
+
  ```
 ( function( $ ) {
 
