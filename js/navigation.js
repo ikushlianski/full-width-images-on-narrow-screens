@@ -179,7 +179,7 @@
 
 	// make images with class ".extra-wide-img" appear full-screen
 	$(document).ready(function(){
-		$("img").wrap("<figure class='extra-wide-img'></figure>");
+		$(".full-width-img").wrap("<figure class='extra-wide-img'></figure>");
 		$("figure.extra-wide-img").each(function(){
 			if ($(this).children("img").attr("width") > $(this).children("img").width()){
 				var containerMargins = $(".container").css("marginRight").replace(/[^-\d\.]/g, '');
