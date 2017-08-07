@@ -4,6 +4,7 @@
 	float: left;
 	width: 100%;
 
+
 	ul {
 		display: none;
 		list-style: none;
@@ -18,6 +19,7 @@
 	position: relative;
 	text-decoration: none;
 	color: #dedbf6; // main color of <a> in menus
+	font-size: 0.8em;
 }
 
 .main-navigation ul {
@@ -189,9 +191,12 @@
 		margin: 0 auto;
 		padding: 0 3.5em;
 		background-color: $color__secondary;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
 	}
 	.nav-menu {
-		padding: .2em 0 0 0;
+		padding: 0 0 0 0;
 		background-color: transparent;
 		margin-bottom: 0em!important;
 	}
@@ -200,12 +205,15 @@
 		max-height: none;
 		padding-left: 0;
 		text-align: center;
+		display: flex;
+		align-items: stretch;
 	}
 	.main-navigation.toggled ul {
 		overflow-y: visible;
 	}
-	.main-navigation li {
-		display: inline-block;
+	.main-navigation li, .main-navigation .menu-menu-1-container {
+		display: flex;
+		align-items: stretch;
 		border:none;
 	}
 	/* left-align dropdown menu items */
@@ -216,6 +224,9 @@
 	.main-navigation a,
 	.main-navigation ul ul li:last-child a {
 		border-bottom: none;
+		display: flex;
+		align-items: center;
+		align-self: stretch;
 	}
 	/* position dropdown menus absolutely */
 	.main-navigation ul ul.toggled-on {

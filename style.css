@@ -445,7 +445,8 @@ a {
   padding: 0.8em 0;
   position: relative;
   text-decoration: none;
-  color: #dedbf6; }
+  color: #dedbf6;
+  font-size: 0.8em; }
 
 .main-navigation ul {
   list-style: none;
@@ -597,20 +598,47 @@ a {
     min-height: 3.5em;
     margin: 0 auto;
     padding: 0 3.5em;
-    background-color: #3F51B5; }
+    background-color: #3F51B5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
   .nav-menu {
-    padding: .2em 0 0 0;
+    padding: 0 0 0 0;
     background-color: transparent;
     margin-bottom: 0em !important; }
   .main-navigation ul,
   .main-navigation.toggled ul {
     max-height: none;
     padding-left: 0;
-    text-align: center; }
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
   .main-navigation.toggled ul {
     overflow-y: visible; }
-  .main-navigation li {
-    display: inline-block;
+  .main-navigation li, .main-navigation .menu-menu-1-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
     border: none; }
   /* left-align dropdown menu items */
   .main-navigation li li {
@@ -618,7 +646,18 @@ a {
     text-align: left; }
   .main-navigation a,
   .main-navigation ul ul li:last-child a {
-    border-bottom: none; }
+    border-bottom: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+            align-self: stretch; }
   /* position dropdown menus absolutely */
   .main-navigation ul ul.toggled-on {
     position: absolute;
