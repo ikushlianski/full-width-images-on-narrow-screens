@@ -1,16 +1,16 @@
 
 File navigation.js
 
-Place this code into your JS file and remember to add CSS class ".extra-wide-img" to all images you want to make full-screen
+Place this code into your JS file and remember to add CSS class ".full-width-img" to all images you want to make full-width
 
  ```
 ( function( $ ) {
 
 	// ...other code
 
-	// make images with class ".extra-wide-img" appear full-screen
+  // make images with class ".full-width-img" appear full-width
 	$(document).ready(function(){
-		$("img").wrap("<figure class='extra-wide-img'></figure>");
+		$(".full-width-img").wrap("<figure class='extra-wide-img'></figure>");
 		$("figure.extra-wide-img").each(function(){
 			if ($(this).children("img").attr("width") > $(this).children("img").width()){
 				var containerMargins = $(".container").css("marginRight").replace(/[^-\d\.]/g, '');
