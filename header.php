@@ -24,6 +24,24 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ilyaonline' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="main-navigation-img">
+				<a href="<?php echo get_home_url(); ?>">
+					<img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ilyalogo_small.png" alt="Ilya Kushlianski website logo">
+				</a>
+				<div class="brand-author-name">
+					<?php pll_e('Ilya Kushlianski'); ?>
+				</div>
+			</div>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ilyaonline' ); ?></button>
+			<?php
+				wp_nav_menu( array(
+					'menu_class'     => 'nav-menu',
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+			?>
+		</nav><!-- #site-navigation -->
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -39,17 +57,6 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'ilyaonline' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'menu_class'     => 'nav-menu',
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="container site-content">

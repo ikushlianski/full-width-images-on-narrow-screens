@@ -227,7 +227,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5; }
 
@@ -440,6 +440,9 @@ a {
     margin: 0;
     padding-left: 0; }
 
+.main-navigation-img {
+  display: none; }
+
 .main-navigation a {
   display: block;
   padding: 0.8em 0;
@@ -447,6 +450,9 @@ a {
   text-decoration: none;
   color: #dedbf6;
   font-size: 0.8em; }
+
+.main-navigation .main-navigation-img a {
+  padding: 0em; }
 
 .main-navigation ul {
   list-style: none;
@@ -467,10 +473,15 @@ a {
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a {
   font-weight: 700;
-  color: #FFDF80; }
+  border-bottom: 3px solid #f44336;
+  padding: 1em 0.5em;
+  font-size: 1em; }
 
 .main-navigation a:hover {
-  background-color: #3849a2; }
+  background-color: #566f7c; }
+
+.main-navigation .main-navigation-img a:hover {
+  background-color: transparent; }
 
 .main-navigation .nav-menu > ul > li:first-child,
 .main-navigation .nav-menu > li:first-child {
@@ -483,8 +494,6 @@ a {
   color: #707070;
   color: rgba(51, 51, 51, 0.7);
   font-family: "Noto Sans", sans-serif;
-  font-size: 12px;
-  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.5;
   margin-top: 0.5em; }
@@ -563,9 +572,36 @@ a {
   bottom: 0;
   padding: 1em;
   z-index: 1; }
+  .main-navigation.toggled .main-navigation-img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #0b0b25;
+    border-bottom: 1px dashed #1e323d;
+    -webkit-box-shadow: inset 0px -1px 8px 1px black;
+            box-shadow: inset 0px -1px 8px 1px black;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .main-navigation.toggled .main-navigation-img img {
+      padding: 0.5em; }
+  .main-navigation.toggled .brand-author-name {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: #607D8B; }
+  .main-navigation.toggled .current-menu-item > a,
+  .main-navigation.toggled .current-menu-ancestor > a {
+    border-bottom: none;
+    color: #8080FF; }
 
 .nav-menu {
-  padding: 1em;
+  padding: 0.5em;
   margin-bottom: 3em !important;
   background-color: #0b0b25; }
 
@@ -583,6 +619,9 @@ a {
 
 .main-navigation.toggled ul li {
   margin-left: 1em; }
+  .main-navigation.toggled ul li a {
+    font-size: 1em;
+    padding: 0.5em; }
 
 .main-navigation.toggled ul.sub-menu li {
   margin-left: 0em; }
@@ -592,13 +631,24 @@ a {
     display: none; }
   .main-navigation ul {
     display: block; }
+  .main-navigation-img {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    background-color: transparent; }
+    .main-navigation-img .brand-author-name {
+      display: none; }
   .main-navigation,
   .main-navigation.toggled {
     position: relative;
     min-height: 3.5em;
     margin: 0 auto;
-    padding: 0 3.5em;
-    background-color: #3F51B5;
+    padding: 0 5em;
+    background-color: #0b0b25;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -607,10 +657,10 @@ a {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .nav-menu {
     padding: 0 0 0 0;
     background-color: transparent;
@@ -630,7 +680,7 @@ a {
             align-items: stretch; }
   .main-navigation.toggled ul {
     overflow-y: visible; }
-  .main-navigation li, .main-navigation .menu-menu-1-container {
+  .main-navigation li, .main-navigation .menu-main-menu-eng-container, .main-navigation .menu-main-menu-russian-container {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -639,7 +689,10 @@ a {
     -webkit-align-items: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
-    border: none; }
+    border: none;
+    margin-right: 0.5em; }
+    .main-navigation li:last-child, .main-navigation .menu-main-menu-eng-container:last-child, .main-navigation .menu-main-menu-russian-container:last-child {
+      margin-right: 0em; }
   /* left-align dropdown menu items */
   .main-navigation li li {
     display: block;
@@ -658,6 +711,9 @@ a {
     -webkit-align-self: stretch;
         -ms-flex-item-align: stretch;
             align-self: stretch; }
+  .main-navigation .current-menu-item > a,
+  .main-navigation .current-menu-ancestor > a {
+    font-size: 0.8em; }
   /* position dropdown menus absolutely */
   .main-navigation ul ul.toggled-on {
     position: absolute;
@@ -665,14 +721,14 @@ a {
     display: block;
     z-index: 10;
     margin-left: 0;
-    background: #3F51B5; }
+    background: #607D8B; }
   .main-navigation ul ul ul.toggled-on {
     position: relative;
     width: 12em;
     display: block;
     z-index: 10;
     margin-left: 0;
-    background: #4d5ec1; }
+    background: #6b8a99; }
   .dropdown-toggle {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -694,9 +750,9 @@ a {
     color: white; }
   .dropdown-toggle:hover,
   .dropdown-toggle:focus {
-    background-color: #32408f; }
+    background-color: #4b626d; }
   .dropdown-toggle:focus:after {
-    background-color: #32408f;
+    background-color: #4b626d;
     color: white; }
   .dropdown-toggle,
   .dropdown-toggle.toggle-on,
@@ -709,7 +765,8 @@ a {
     padding-left: 0.3em; }
   .main-navigation ul a {
     padding-left: 0.5em;
-    padding-right: 0.5em; }
+    padding-right: 0.5em;
+    border-bottom: 3px solid transparent; }
   .main-navigation .menu-item-has-children > a {
     padding-right: 2.5em; } }
 
