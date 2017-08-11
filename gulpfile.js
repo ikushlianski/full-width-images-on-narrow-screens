@@ -16,6 +16,10 @@ gulp.task('sass', function(){ // Создаем таск Sass
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('./')) // Выгружаем результата в папку css
+		.on('error', function(errorInfo){
+			console.log(errorInfo.toString());
+			this.emit('end');
+		})
 		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
