@@ -30,21 +30,21 @@ gulp.task('scripts', function() {
 	return gulp.src([ // Берем все необходимые библиотеки
 		'./libs/jquery/dist/jquery.min.js', // Берем jQuery
 		'./libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'./js/ilyaonline.js' // Берем ilyaonline.js неминифицированный
+		'./js/navigation.js' // Берем navigation.js неминифицированный
 		])
 		.pipe(concat('ilyaonline.min.js')) // Собираем их в кучу в новом файле ilyaonline.min.js
 		.pipe(uglify()) // Сжимаем JS файл
 		.pipe(gulp.dest('./js')); // Выгружаем в папку app/js
 });
 
-gulp.task('css-libs', ['sass'], function() {
-	return gulp.src('./css/libs.css') // Выбираем файл для минификации
-		.pipe(cssnano()) // Сжимаем
-		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-		.pipe(gulp.dest('./css')); // Выгружаем в папку app/css
-});
+// gulp.task('css-libs', ['sass'], function() {
+// 	return gulp.src('./css/libs.css') // Выбираем файл для минификации
+// 		.pipe(cssnano()) // Сжимаем
+// 		.pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
+// 		.pipe(gulp.dest('./css')); // Выгружаем в папку app/css
+// });
 
-gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
+gulp.task('watch', ['browser-sync', /*'css-libs',*/ 'scripts'], function() {
 	gulp.watch('./sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
 	gulp.watch('./**/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch('./**/*.php', browserSync.reload); // Наблюдение за PHP файлами в корне проекта
@@ -67,27 +67,26 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
 // });
 
 
-// gulp.task('build', [/*'clean', 'img',*/ 'sass', 'scripts'], function() {
-//
-// 	var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-// 		'./css/main.css',
-// 		'./css/libs.min.css'
-// 		])
-// 	.pipe(gulp.dest('../css'))
-//
-// 	var buildFonts = gulp.src('./fonts/**/*') // Переносим шрифты в продакшен
-// 	.pipe(gulp.dest('../fonts'))
-//
-// 	var buildJs = gulp.src('./js/**/*') // Переносим скрипты в продакшен
-// 	.pipe(gulp.dest('../js'))
-//
-// 	var buildHtml = gulp.src('./*.html') // Переносим HTML в продакшен
-// 	.pipe(gulp.dest('../dist'));
-//
-// 	var buildPhp = gulp.src('./*.php') // Переносим php в продакшен
-// 	.pipe(gulp.dest('../dist'));
-//
-// });
+gulp.task('build', [/*'clean', 'img',*/ 'sass' /*, 'scripts'*/], function() {
+
+	var buildCss = gulp.src( // Переносим библиотеки в продакшен
+		'./style.css')
+	.pipe(cssnano()) // Сжимаем
+	.pipe(gulp.dest('__dist/css'))
+
+	// var buildFonts = gulp.src('./fonts/**/*') // Переносим шрифты в продакшен
+	// .pipe(gulp.dest('__dist/fonts'))
+
+	// var buildJs = gulp.src('./js/**/*') // Переносим скрипты в продакшен
+	// .pipe(gulp.dest('../js'))
+	//
+	// var buildHtml = gulp.src('./*.html') // Переносим HTML в продакшен
+	// .pipe(gulp.dest('../dist'));
+	//
+	// var buildPhp = gulp.src('./*.php') // Переносим php в продакшен
+	// .pipe(gulp.dest('../dist'));
+
+});
 
 // gulp.task('clear', function (callback) {
 // 	return cache.clearAll();
