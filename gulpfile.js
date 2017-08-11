@@ -55,16 +55,16 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
 // 	return del.sync('dist'); // Удаляем папку dist перед сборкой
 // });
 
-// gulp.task('img', function() {
-// 	return gulp.src('app/img/**/*') // Берем все изображения из app
-// 		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
-// 			interlaced: true,
-// 			progressive: true,
-// 			svgoPlugins: [{removeViewBox: false}],
-// 			use: [pngquant()]
-// 		})))
-// 		.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
-// });
+gulp.task('img', function() {
+	return gulp.src('./assets/img/**/*') // Берем все изображения из app
+		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		})))
+		.pipe(gulp.dest('__dist/img')); // Выгружаем на продакшен
+});
 
 
 // gulp.task('build', [/*'clean', 'img',*/ 'sass', 'scripts'], function() {
