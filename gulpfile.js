@@ -10,13 +10,16 @@ var gulp       = require('gulp'), // Подключаем Gulp
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer');// Подключаем библиотеку для автоматического добавления префиксов
+	const gulpbabel = require('gulp-babel');
+	var babel = require("babel-core");
+
 
 gulp.task('sass', function(){ // Создаем таск Sass
 	return gulp.src('./sass/style.scss') // Берем источник
 		.pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
 		.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 		.pipe(gulp.dest('./')) // Выгружаем результата в папку css
-		.on('error', function(errorInfo){
+		.on('error', function(errorInfo) {
 			console.log(errorInfo.toString());
 			this.emit('end');
 		})
@@ -31,14 +34,14 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 });
 
 gulp.task('scripts', function() {
-	return gulp.src([ // Берем все необходимые библиотеки
-		'./libs/jquery/dist/jquery.min.js', // Берем jQuery
-		'./libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-		'./js/navigation.js' // Берем navigation.js неминифицированный
-		])
-		.pipe(concat('ilyaonline.min.js')) // Собираем их в кучу в новом файле ilyaonline.min.js
-		.pipe(uglify()) // Сжимаем JS файл
-		.pipe(gulp.dest('./js')); // Выгружаем в папку app/js
+	return gulp.src('./js/**/*')
+		.pipe(concat('ilyaonline.min.js'))
+		.pipe(gulpbabel({
+            presets: ['env']
+        }))
+		.pipe(uglify())
+		.pipe(gulp.dest('./__dist/js'))
+		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
 
 // gulp.task('css-libs', ['sass'], function() {
@@ -52,7 +55,7 @@ gulp.task('watch', ['browser-sync', /*'css-libs',*/ 'scripts'], function() {
 	gulp.watch('./sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
 	gulp.watch('./**/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch('./**/*.php', browserSync.reload); // Наблюдение за PHP файлами в корне проекта
-	gulp.watch('./js/**/*.js', browserSync.reload);   // Наблюдение за JS файлами в папке js
+	gulp.watch('./js/*.js', ['scripts']);   // Наблюдение за JS файлами в папке js
 });
 
 // gulp.task('clean', function() {
@@ -95,5 +98,3 @@ gulp.task('build', [/*'clean', 'img',*/ 'sass' /*, 'scripts'*/], function() {
 // gulp.task('clear', function (callback) {
 // 	return cache.clearAll();
 // })
-
-gulp.task('default', ['watch']);

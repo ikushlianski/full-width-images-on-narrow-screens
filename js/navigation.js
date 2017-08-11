@@ -10,7 +10,7 @@
 	// 	$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
 	// 	$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
 	// });
-
+	
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );

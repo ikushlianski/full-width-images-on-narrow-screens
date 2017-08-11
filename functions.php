@@ -113,13 +113,13 @@ function ilyaonline_scripts() {
 	wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
 	wp_enqueue_style( 'ilyaonline-prosto-one', 'https://fonts.googleapis.com/css?family=Prosto+One&amp;subset=cyrillic' );
 	wp_enqueue_style( 'ilyaonline-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic' );
-	wp_enqueue_script( 'ilyaonline-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	// wp_enqueue_script( 'ilyaonline-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'ilyaonline-customscripts', get_template_directory_uri() . '/js/ilyaonline.min.js', array('jquery'), '20151215', true );
-	wp_enqueue_script('bootstrap-scripts', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20151215', true);
-	wp_enqueue_script( 'ilyaonline-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_enqueue_script( 'ilyaonline-customscripts', get_template_directory_uri() . '/__dist/js/ilyaonline.min.js', array('jquery'), '20151215', true );
+	// wp_enqueue_script('bootstrap-scripts', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '20151215', true);
+	// wp_enqueue_script( 'ilyaonline-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 
-	wp_localize_script( 'ilyaonline-navigation', 'screenReaderText', array(
+	wp_localize_script( 'ilyaonline-customscripts', 'screenReaderText', array(
 		'expand'   => '<span class="screen-reader-text">' . __( 'expand child menu', 'ilyaonline' ) . '</span>',
 		'collapse' => '<span class="screen-reader-text">' . __( 'collapse child menu', 'ilyaonline' ) . '</span>',
 	) );
