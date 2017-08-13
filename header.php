@@ -27,7 +27,7 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="main-navigation-img">
 				<a href="<?php echo get_home_url(); ?>">
-					<img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/ilyalogo_small.png" alt="Ilya Kushlianski website logo">
+					<img  src="<?php echo get_stylesheet_directory_uri(); ?>/__dist/img/ilyalogo_small.png" alt="Ilya Kushlianski website logo">
 				</a>
 				<div class="brand-author-name">
 					<?php pll_e('Ilya Kushlianski'); ?>
@@ -42,21 +42,23 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+		<img class="site-branding-image" srcset="<?php echo get_stylesheet_directory_uri(); ?>/__dist/img/ilya_back_2048.jpg 1920w, <?php echo get_stylesheet_directory_uri(); ?>/__dist/img/ilya_back_960.jpg 960w, <?php echo get_stylesheet_directory_uri(); ?>/__dist/img/ilya_back_768.jpg 768w" alt="Ilya Kushlianski, web developer">
+			<div class="site-branding">
+				<?php
+				if ( is_front_page() && is_home() ) : ?>
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else : ?>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php
+				endif;
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
+			</div><!-- .site-branding -->
+		<!-- end of img tag -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="container site-content">
