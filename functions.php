@@ -8,6 +8,9 @@
  */
 if (function_exists('pll_register_string')) {
  	pll_register_string('Site author name', $siteAuthorName = "Ilya Kushlianski");
+	pll_register_string('Site person first name', $siteAuthorFirstName = "Ilya");
+	pll_register_string('Site person last name', $siteAuthorLastName = "Kushlianski");
+  pll_register_string('Brand person title', $brandAuthorTitle = "Beginner developer");
 }
 if ( ! function_exists( 'ilyaonline_setup' ) ) :
 /**

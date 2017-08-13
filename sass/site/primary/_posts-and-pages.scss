@@ -27,9 +27,59 @@
 	margin: 0 0 1.5em;
 }
 
+// FRONT PAGE BLOCK
+.brand-person {
+	font-size: 1.6em;
+	letter-spacing: -1px;
+}
+.brand-person-title {
+	text-transform: uppercase;
+	background-color: #f44336;
+	font-size: 0.6em;
+	padding: 0.1em;
+	display: flex;
+	justify-content: center;
+
+}
 .site-branding {
-	position: absolute;
 	z-index: 1;
 	color: $color__accent-slight;
-	text-shadow: 1px 1px whitesmoke;
+	font-family: Roboto;
+	font-size: 2em;
+	text-align: center;
+}
+.site-branding-image-div {
+	background-image: url('./__dist/img/ilya_back_2048.jpg');
+	background-size: cover;
+	height: 25em;
+	display: flex;
+  width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 0 10%;
+}
+@media (max-width: 768px) {
+	.site-branding-image-div {
+		justify-content: center;
+		align-items: flex-end;
+		padding: 10% 0;
+	}
+	.brand-person-title {
+		text-align: center;
+	}
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.site-branding-image-div {
+		height: 35em;
+	}
+}
+@media (min-width: 1024px) {
+	.brand-person {
+		font-size: 2em;
+		// letter-spacing: -1px;
+	}
+	.site-branding-image-div {
+		height: 40em;
+	}
+
 }

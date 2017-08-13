@@ -910,6 +910,74 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
+.brand-person {
+  font-size: 1.6em;
+  letter-spacing: -1px; }
+
+.brand-person-title {
+  text-transform: uppercase;
+  background-color: #f44336;
+  font-size: 0.6em;
+  padding: 0.1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.site-branding {
+  z-index: 1;
+  color: #FFF9E6;
+  font-family: Roboto;
+  font-size: 2em;
+  text-align: center; }
+
+.site-branding-image-div {
+  background-image: url("./__dist/img/ilya_back_2048.jpg");
+  background-size: cover;
+  height: 25em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 10%; }
+
+@media (max-width: 768px) {
+  .site-branding-image-div {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 10% 0; }
+  .brand-person-title {
+    text-align: center; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .site-branding-image-div {
+    height: 35em; } }
+
+@media (min-width: 1024px) {
+  .brand-person {
+    font-size: 2em; }
+  .site-branding-image-div {
+    height: 40em; } }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
