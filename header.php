@@ -55,6 +55,18 @@
 				<div class="brand-person-title">
 					<?php pll_e('Beginner developer'); ?>
 				</div>
+				<div class="site-branding__brand-menu">
+					<?php
+						wp_nav_menu( array(
+							// 'menu_class'     => '',
+							'theme_location' => 'menu-2',
+							'menu_id'        => 'brand-menu',
+							'before'				 => '<button class="site-branding__brand-menu__button">',
+							'after' 				 => '</button>',
+							'items_wrap'		 => '%3$s'
+						) );
+					?>
+				</div>
 			</div><!-- .site-branding -->
 		</div>
 	</header><!-- #masthead -->

@@ -50,6 +50,7 @@ function ilyaonline_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'menu-1' => esc_html__( 'Primary', 'ilyaonline' ),
+		'menu-2' => esc_html__( 'Brand menu', 'ilyaonline' )
 	) );
 
 	/*
@@ -114,7 +115,7 @@ function ilyaonline_scripts() {
 	wp_enqueue_style( 'ilyaonline-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
-	wp_enqueue_style( 'ilyaonline-prosto-one', 'https://fonts.googleapis.com/css?family=Prosto+One&amp;subset=cyrillic' );
+  wp_enqueue_style( 'ilyaonline-oswald', 'https://fonts.googleapis.com/css?family=Oswald&amp;subset=cyrillic' );
 	wp_enqueue_style( 'ilyaonline-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic' );
 	// wp_enqueue_script( 'ilyaonline-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
