@@ -44,6 +44,9 @@
 		</nav><!-- #site-navigation -->
 		<div class="site-branding-image-div">
 			<div class="site-branding">
+				<div class="brand-person-image">
+					<img class="brand-person-image-src" src="<?php echo get_stylesheet_directory_uri(); ?>/__dist/img/ilya_img_small.jpg" alt="Ilya Kushlianski">
+				</div>
 				<div class="brand-person">
 					<span class="brand-person-first-name">
 						<?php pll_e('Ilya'); ?>

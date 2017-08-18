@@ -34,13 +34,12 @@
 	// letter-spacing: -3px;
 	font-family: Oswald;
 	text-shadow: 0.5px 0.5px 0.5px black;
+	text-transform: uppercase;
 }
 .brand-person-title {
-	text-transform: uppercase;
 	background-color: #f44336;
 	font-size: 0.5em;
 	padding: 0.1em;
-	display: flex;
 	justify-content: center;
 
 }
@@ -60,7 +59,7 @@
 			width: 100%;
 			display: flex;
 			flex-direction: row;
-			justify-content: space-around;
+			justify-content: space-evenly;
 			align-items: flex-end;
 
 		}
@@ -82,26 +81,52 @@
 	}
 }
 .site-branding-image-div {
-	background-image: url('./__dist/img/ilya_blue_high_contrast.jpg');
-	background-size: cover;
-	height: 25em;
+	// background-image: url('./__dist/img/ilya_back_2048.jpg');
+	// background-size: cover;
 	display: flex;
   width: 100%;
 	justify-content: flex-end;
 	align-items: center;
-	padding: 0 7%;
+	padding: 0% 2%;
 }
-@media (max-width: 768px) {
-	.brand-person-title {
-		text-align: center;
-	}
-	.site-branding {
-		// font-size: 1.5em;
+
+////////////////
+// MEDIA QUERIES
+////////////////
+@media (max-width: 500px) {
+	.brand-person {
+		font-size: 1em;
 	}
 	.site-branding-image-div {
+		max-height: 20em;
+	}
+}
+@media (max-width: 768px) {
+	.brand-person-image {
+		width: 25%;
+		align-self: center;
+	}
+	.brand-person-image-src {
+		border-radius: 50%;
+		border: 3px solid white;
+	}
+	.brand-person-title {
+		text-align: center;
+		max-width: fit-content;
+		align-self: center;
+		background-color: transparent;
+		border-top: 1px solid #f44336;
+		border-bottom: 1px solid #f44336;
+	}
+	.site-branding {
+		display: flex;
+    flex-direction: column;
+	}
+	.site-branding-image-div {
+		background-image: url('./__dist/img/icon_pattern_dark.jpg');
 		justify-content: center;
-		align-items: flex-end;
-		padding: 7% 0;
+		align-items: center;
+		height: 25em;
 	}
 	.site-branding__brand-menu {
 		&__button {
@@ -110,7 +135,12 @@
 	}
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+	.brand-person-image {
+		display: none;
+	}
 	.site-branding-image-div {
+		background-image: url('./__dist/img/ilya_back_2048.jpg');
+		background-size: cover;
 		height: 25em;
 	}
 	.site-branding__brand-menu {
@@ -124,12 +154,20 @@
 		font-size: 2em;
 		// letter-spacing: -1px;
 	}
+	.brand-person-image {
+		display: none;
+	}
+	.site-branding {
+
+	}
 	.site-branding-image-div {
 		height: 30em;
+		background-image: url('./__dist/img/ilya_back_2048.jpg');
+		background-size: cover;
 	}
 	.site-branding__brand-menu {
 		&__button {
-			font-size: 0.6em;
+			font-size: 0.5em;
 		}
 	}
 }
@@ -140,6 +178,6 @@
 }
 @media (min-width: 1500px) {
 	.site-branding-image-div {
-		height: 50em;
+		height: 40em;
 	}
 }
