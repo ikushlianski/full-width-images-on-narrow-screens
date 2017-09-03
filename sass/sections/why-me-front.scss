@@ -1,0 +1,64 @@
+h3.header {
+    // margin-top: 0px;
+    color: $color__material-brown;
+    text-align: center;
+    font-family: oswald;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h3.subheader {
+    font-size: 1.2em;
+    color: $color__material-brown;
+    text-align: center;
+    font-weight: normal;
+}
+.section {
+    padding: 0.5em;
+}
+.skills-list {
+    & .frontend-skills, .backend-skills, .misc-skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: .5em;
+    }
+    & .frontend-skills-list, .backend-skills-list, .misc-skills-list {
+        border: 1px solid $color__background-hr;
+        border-radius: 0 5px 5px 5px;
+        box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.3);
+        background-color: white;
+        list-style: none;
+        margin: 0 0 0.5em 0;
+        padding: 0;
+    }
+}
+
+.skill-description {
+    color: $color__material-brown;
+    font-weight: normal;
+    display: inline-block;
+}
+.skill-label {
+    background-color: $color__accent;
+    padding:0.3em;
+    display: inline-block;
+    font-size: .8em;
+    color: white;
+}
+a.skills-list-more {
+    font-size: 0.8em;
+    margin: 0 auto;
+    display: table;
+    padding: 0.5em;
+}
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    text-align: center;
+    flex-basis: 150px;
+    flex-shrink: 0;
+    padding: 0.3em;
+    &:last-of-type {
+        margin-bottom: 0em;
+    }
+}

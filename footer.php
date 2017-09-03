@@ -15,14 +15,14 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ilyaonline' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ilyaonline' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
+
 			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ilyaonline' ), 'ilyaonline', '<a href="https://automattic.com/">Ilya Kushlianski</a>' );
+				pll_e('Theme Ilya Online created by Ilya Kushlianski');
+				if ( date('Y') == 2017 ){
+					echo '<p>&copy; ' . date('Y') . '</p>';
+				} else {
+					echo '<p>&copy; 2017-' . date('Y') . '</p>';
+				};
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

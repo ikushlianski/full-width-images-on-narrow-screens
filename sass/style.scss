@@ -104,3 +104,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
+/*--------------------------------------------------------------
+# Website sections
+--------------------------------------------------------------*/
+@import "sections/header";
+@import "sections/why-me-front";
+@import "sections/footer";

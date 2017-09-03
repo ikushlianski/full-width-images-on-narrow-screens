@@ -42,36 +42,7 @@
 				) );
 			?>
 		</nav><!-- #site-navigation -->
-		<div class="site-branding-image-div">
-			<div class="site-branding">
-				<div class="brand-person-image">
-					<img class="brand-person-image-src" src="<?php echo get_stylesheet_directory_uri(); ?>/__dist/img/ilya_img_small.jpg" alt="Ilya Kushlianski">
-				</div>
-				<div class="brand-person">
-					<span class="brand-person-first-name">
-						<?php pll_e('Ilya'); ?>
-					</span>
-					<span class="brand-person-last-name">
-						<?php pll_e('Kushlianski'); ?>
-					</span>
-				</div>
-				<div class="brand-person-title">
-					<?php pll_e('Beginner developer'); ?>
-				</div>
-				<div class="site-branding__brand-menu">
-					<?php
-						wp_nav_menu( array(
-							// 'menu_class'     => '',
-							'theme_location' => 'menu-2',
-							'menu_id'        => 'brand-menu',
-							'before'				 => '<button class="site-branding__brand-menu__button">',
-							'after' 				 => '</button>',
-							'items_wrap'		 => '%3$s'
-						) );
-					?>
-				</div>
-			</div><!-- .site-branding -->
-		</div>
+
 	</header><!-- #masthead -->
 
-	<div id="content" class="container site-content">
+	<div id="content" class=" site-content">

@@ -1,0 +1,13 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  background-color: $color__the-darkest;
+
+}
+.site-info {
+  color: $color__background-hr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

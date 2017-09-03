@@ -6,11 +6,17 @@
  *
  * @package Ilyaonline
  */
+
+ // Phrases for translation
 if (function_exists('pll_register_string')) {
  	pll_register_string('Site author name', $siteAuthorName = "Ilya Kushlianski");
 	pll_register_string('Site person first name', $siteAuthorFirstName = "Ilya");
 	pll_register_string('Site person last name', $siteAuthorLastName = "Kushlianski");
   pll_register_string('Brand person title', $brandAuthorTitle = "Beginner developer");
+  pll_register_string('Who created theme', $themeCreator = "Theme Ilya Online created by Ilya Kushlianski");
+  pll_register_string('Why choose me?', $whyMe = "Why choose me?");
+	pll_register_string('Skills', $skills = "Skills");
+	pll_register_string('Personality', $personality = 'Personality');
 }
 if ( ! function_exists( 'ilyaonline_setup' ) ) :
 /**

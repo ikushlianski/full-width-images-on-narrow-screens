@@ -144,7 +144,7 @@
 	left: 1em;
 	font-size: 1em;
 	text-transform: uppercase;
-	background-color: #3F51B5;
+	background-color: $color__the-darkest;
 	color: white;
 	transition: all 0.2s ease-in;
 }
@@ -163,7 +163,7 @@
 			display:flex;
 			justify-content: center;
 			background-color: #0b0b25;
-			border-bottom: 1px dashed #1e323d;
+			border-bottom: 1px dashed $color__border-input;
     	// box-shadow: inset 0px -1px 8px 1px black;
 			align-items: center;
 				img {
@@ -173,7 +173,7 @@
 		.brand-author-name {
 			font-family: $font__main;
 			font-weight: bold;
-			color: $color__secondary;
+			color: $color__border-input;
 		}
 		.current-menu-item > a,
 		.current-menu-ancestor > a {
