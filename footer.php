@@ -15,13 +15,12 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-
-			<?php
-				pll_e('Theme Ilya Online created by Ilya Kushlianski');
+			<div><?php pll_e('Theme IlyaOnline created by Ilya Kushlianski');?></div>
+				<?php
 				if ( date('Y') == 2017 ){
-					echo '<p>&copy; ' . date('Y') . '</p>';
+					echo '<div>&copy; ' . date('Y') . '</div>';
 				} else {
-					echo '<p>&copy; 2017-' . date('Y') . '</p>';
+					echo '<div>&copy; 2017-' . date('Y') . '</div>';
 				};
 			?>
 		</div><!-- .site-info -->

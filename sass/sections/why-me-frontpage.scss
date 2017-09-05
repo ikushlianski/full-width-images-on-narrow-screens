@@ -1,0 +1,53 @@
+a.cta-button {
+    border: 1px solid #e6e6e6;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    background-color: transparent;
+    margin: 1em auto;
+    display: table;
+    &:hover {
+        text-decoration: none;
+        color: $color__accent-striking;
+        border-color: $color__accent-striking;
+    }
+}
+
+.section.why-me {
+  background-color: $color__text-input-focus;
+  background: linear-gradient(to top left, $color__the-darkest, $color__link);
+  // background-color: $color__the-darkest;
+  color: $color__background-body;
+}
+.why-me-list .reason-description {
+  display: block;
+}
+a.why-me-list-more {
+  @extend .skills-list-more;
+  color: $color__accent-striking;
+}
+ul.why-me-list {
+    margin: 2em 0em 2em 0em;
+    list-style-type: none;
+    padding: 0;
+}
+li.why-me-reason {
+  text-align: center;
+  padding: 0 0.5em;
+  font-size: 0.9em;
+  &::after {
+    content: '';
+    width: 15%;
+    border-bottom: 1px solid $color__secondary;
+    display: block;
+    margin: 1em auto;
+  }
+  &:last-child {
+    margin-bottom: 0;
+    &::after {
+      content: '';
+      border-bottom: 0px solid $color__secondary;
+
+    }
+  }
+}

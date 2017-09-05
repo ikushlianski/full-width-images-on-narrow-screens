@@ -559,7 +559,8 @@ a {
   background-color: #0b0b25;
   color: white;
   -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in; }
+  transition: all 0.2s ease-in;
+  border: 1px solid white; }
 
 .menu-toggle.ishidden {
   bottom: -3em; }
@@ -583,6 +584,8 @@ a {
             justify-content: center;
     background-color: #0b0b25;
     border-bottom: 1px dashed #ccc;
+    -webkit-box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.5);
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
@@ -1073,9 +1076,11 @@ figure.gallery-item {
   .brand-person {
     font-size: 1em; }
   .brand-person-title {
-    font-size: 0.45em; }
+    font-size: 0.45em !important; }
   .brand-person-image {
-    width: 33.333333%; } }
+    width: 33.333333%; }
+  .site-branding__brand-menu a {
+    font-size: 1.3rem; } }
 
 @media (max-width: 768px) {
   .brand-person-image {
@@ -1087,20 +1092,16 @@ figure.gallery-item {
   .brand-person-image-src {
     -webkit-border-radius: 50%;
             border-radius: 50%;
-    border: 3px solid white; }
+    border: 3px solid #f1f1f1; }
   .brand-person-title {
+    font-size: 0.6em;
     text-align: center;
-    max-width: -webkit-fit-content;
-    max-width: -moz-fit-content;
-    max-width: fit-content;
     -webkit-align-self: center;
         -ms-flex-item-align: center;
                 -ms-grid-row-align: center;
             align-self: center;
     background-color: transparent;
-    border-top: 1px solid #f44336;
-    border-bottom: 1px solid #f44336;
-    font-size: 0.5em; }
+    color: #ffc107; }
   .site-branding {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1112,7 +1113,10 @@ figure.gallery-item {
         -ms-flex-direction: column;
             flex-direction: column; }
   .site-branding-image-div {
-    background-image: url("./__dist/img/icon_pattern_dark.jpg");
+    background-color: #111;
+    background: -webkit-gradient(linear, left bottom, right top, from(#111), to(#404040));
+    background: -webkit-linear-gradient(bottom left, #111, #404040);
+    background: linear-gradient(to top right, #111, #404040);
     -webkit-box-pack: center;
     -webkit-justify-content: center;
         -ms-flex-pack: center;
@@ -1159,20 +1163,19 @@ figure.gallery-item {
     height: 40em; } }
 
 h3.header {
-  color: #795548;
+  color: #0b0b25;
   text-align: center;
   font-family: oswald;
   text-transform: uppercase;
-  font-weight: bold; }
-
-h3.subheader {
-  font-size: 1.2em;
-  color: #795548;
-  text-align: center;
-  font-weight: normal; }
+  font-weight: bold;
+  margin: 1em auto;
+  color: #607D8B; }
 
 .section {
   padding: 0.5em; }
+
+.section.why-me .header {
+  color: #ffc107; }
 
 .skills-list .frontend-skills, .skills-list .backend-skills, .skills-list .misc-skills {
   display: -webkit-box;
@@ -1190,8 +1193,8 @@ h3.subheader {
 
 .skills-list .frontend-skills-list, .skills-list .backend-skills-list, .skills-list .misc-skills-list {
   border: 1px solid #ccc;
-  -webkit-border-radius: 0 5px 5px 5px;
-          border-radius: 0 5px 5px 5px;
+  -webkit-border-radius: 0 0px 5px 5px;
+          border-radius: 0 0px 5px 5px;
   -webkit-box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
   background-color: white;
@@ -1200,18 +1203,18 @@ h3.subheader {
   padding: 0; }
 
 .skill-description {
-  color: #795548;
+  color: #666;
   font-weight: normal;
-  display: inline-block; }
+  display: block; }
 
 .skill-label {
-  background-color: #f44336;
+  background-color: #607D8B;
   padding: 0.3em;
-  display: inline-block;
-  font-size: .8em;
+  display: block;
+  font-size: .9em;
   color: white; }
 
-a.skills-list-more {
+a.skills-list-more, a.why-me-list-more {
   font-size: 0.8em;
   margin: 0 auto;
   display: table;
@@ -1221,9 +1224,9 @@ a.skills-list-more {
   font-weight: bold;
   margin-bottom: 0.5em;
   text-align: center;
-  -webkit-flex-basis: 150px;
-      -ms-flex-preferred-size: 150px;
-          flex-basis: 150px;
+  -webkit-flex-basis: 125px;
+      -ms-flex-preferred-size: 125px;
+          flex-basis: 125px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
@@ -1239,15 +1242,10 @@ footer {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  background-color: #0b0b25; }
+          justify-content: center; }
 
 .site-info {
-  color: #ccc;
+  color: #666;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1260,4 +1258,120 @@ footer {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+a.cta-button {
+  border: 1px solid #e6e6e6;
+  font-size: 1.5rem;
+  color: white;
+  padding: 1rem;
+  background-color: transparent;
+  margin: 1em auto;
+  display: table; }
+  a.cta-button:hover {
+    text-decoration: none;
+    color: #ffc107;
+    border-color: #ffc107; }
+
+.section.why-me {
+  background-color: #111;
+  background: -webkit-gradient(linear, right bottom, left top, from(#0b0b25), to(#00274D));
+  background: -webkit-linear-gradient(bottom right, #0b0b25, #00274D);
+  background: linear-gradient(to top left, #0b0b25, #00274D);
+  color: #eee; }
+
+.why-me-list .reason-description {
+  display: block; }
+
+a.why-me-list-more {
+  color: #ffc107; }
+
+ul.why-me-list {
+  margin: 2em 0em 2em 0em;
+  list-style-type: none;
+  padding: 0; }
+
+li.why-me-reason {
+  text-align: center;
+  padding: 0 0.5em;
+  font-size: 0.9em; }
+  li.why-me-reason::after {
+    content: '';
+    width: 15%;
+    border-bottom: 1px solid #607D8B;
+    display: block;
+    margin: 1em auto; }
+  li.why-me-reason:last-child {
+    margin-bottom: 0; }
+    li.why-me-reason:last-child::after {
+      content: '';
+      border-bottom: 0px solid #607D8B; }
+
+.portfolio-item {
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  margin: 0.5em;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-flex-basis: 200px;
+      -ms-flex-preferred-size: 200px;
+          flex-basis: 200px; }
+  .portfolio-item__meta {
+    padding: 0.5em 1em 1em;
+    line-height: normal; }
+  .portfolio-item__img {
+    display: block;
+    -webkit-border-radius: 5px 5px 0px 0px;
+            border-radius: 5px 5px 0px 0px; }
+  .portfolio-item__name {
+    font-weight: bold;
+    color: #111; }
+  .portfolio-item__short-desc {
+    color: #404040;
+    font-size: 0.9em; }
+
+.portfolio-items-container {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.section.portfolio {
+  background-color: #111;
+  background: -webkit-gradient(linear, left top, left bottom, from(#111), to(#404040));
+  background: -webkit-linear-gradient(top, #111, #404040);
+  background: linear-gradient(to bottom, #111, #404040);
+  border-top: 2px solid #607D8B;
+  border-bottom: 2px solid #607D8B;
+  margin: 1em 0em 0em;
+  padding-left: 2em;
+  padding-right: 2em;
+  -webkit-box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3); }
+  .section.portfolio .header {
+    color: #ccc;
+    margin-top: 2em; }

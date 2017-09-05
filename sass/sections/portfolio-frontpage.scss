@@ -1,0 +1,49 @@
+.portfolio-item {
+  background-color: $color__background-screen;
+  box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  margin: 0.5em;
+  flex-shrink: 0;
+  flex-basis: 200px;
+
+  &__meta {
+    padding: 0.5em 1em 1em;
+    line-height: normal;
+  }
+  &__img {
+    display: block;
+    border-radius: 5px 5px 0px 0px;
+  }
+  &__name {
+    font-weight: bold;
+    color: $color__text-input-focus
+  }
+  &__short-desc {
+    color: $color__text-main;
+    font-size: 0.9em;
+  }
+}
+.portfolio-items-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+.section.portfolio {
+  // background-color: $color__text-input-focus;
+  background-color: $color__text-input-focus;
+  background: linear-gradient(to bottom , $color__text-input-focus, $color__text-main);
+  border-top: 2px solid $color__secondary;
+  border-bottom: 2px solid $color__secondary;
+  margin: 1em 0em 0em;
+  padding-left: 2em;
+  padding-right: 2em;
+  box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.3);
+  & .header {
+    color: $color__background-hr;
+    margin-top: 2em;
+  }
+}
