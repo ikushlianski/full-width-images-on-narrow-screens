@@ -25,3 +25,14 @@ function ilyaonline_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'ilyaonline_body_classes' );
+
+
+// Show backgrounds on skills
+function showSkillBackground() {
+	$bgimg = get_field('skill_image');
+	if ($bgimg) {
+		return $bgimg;
+	} else {
+		return false;
+	}
+}

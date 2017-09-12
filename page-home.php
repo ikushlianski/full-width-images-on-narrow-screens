@@ -45,22 +45,21 @@ get_header(); ?>
 						<ul class="frontend-skills-list">
 							<div class="skill-label">Frontend</div>
 							<div class="frontend-skills">
-								<li class="skill-name">JavaScript<small class="skill-description">Solid theory, some hands-on experience</small></li>
-								<li class="skill-name">Angular<small class="skill-description">Familiar</small></li>
-								<li class="skill-name">HTML5<small class="skill-description">Solid</small></li>
-								<li class="skill-name">CSS3<small class="skill-description">Solid</small></li>
-								<li class="skill-name">jQuery<small class="skill-description">Good</small></li>
-								<li class="skill-name">Bootstrap<small class="skill-description">Fair</small></li>
+								<div class="skills-list__skill-detail">
+									<li class="skill-name">JavaScript<small class="skill-description">Solid theory, some hands-on experience</small></li>
+								</div>
 							</div>
 							<a class="skills-list-more" href="#">All frontend skills</a>
 						</ul>
 						<ul class="backend-skills-list">
 							<div class="skill-label">Backend</div>
 							<div class="backend-skills">
-								<li class="skill-name">PHP<small class="skill-description">basic</small></li>
-								<li class="skill-name">NodeJS & Express<small class="skill-description">basic theory</small></li>
-								<li class="skill-name">MySQL<small class="skill-description">fair</small></li>
-								<li class="skill-name">MongoDB<small class="skill-description">basic</small></li>
+								<li class="skill-name">PHP<small class="skill-description">Basic</small></li>
+								<li class="skill-name">Laravel<small class="skill-description">Basic</small></li>
+								<li class="skill-name">WordPress<small class="skill-description">Good</small></li>
+								<li class="skill-name">NodeJS & Express<small class="skill-description">Basic theory</small></li>
+								<li class="skill-name">MySQL<small class="skill-description">Fair</small></li>
+								<li class="skill-name">MongoDB<small class="skill-description">Basic</small></li>
 							</div>
 							<a class="skills-list-more" href="#">All backend skills</a>
 						</ul>
@@ -68,6 +67,8 @@ get_header(); ?>
 							<div class="skill-label">Other skills & knowledge</div>
 							<div class="misc-skills">
 								<li class="skill-name">English<small class="skill-description">Advanced. Sufficient for reading docs and communication with customers</small></li>
+								<li class="skill-name">SASS<small class="skill-description">Fair</small></li>
+								<li class="skill-name">Ajax<small class="skill-description">Fair</small></li>
 								<li class="skill-name">Gulp<small class="skill-description">Enough for development automation</small></li>
 								<li class="skill-name">BEM methodology<small class="skill-description">Familiar, trying to implement in projects</small></li>
 								<li class="skill-name">RegEx<small class="skill-description">Solid knowledge</small></li>
@@ -100,7 +101,21 @@ get_header(); ?>
 					<div class="portfolio-item">
 						<img class="portfolio-item__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/events-minsk-img.jpg" alt="">
 						<div class="portfolio-item__meta">
-							<h4 class="portfolio-item__name">Work 2</h4>
+							<h4 class="portfolio-item__name">Score simulator</h4>
+							<div class="portfolio-item__short-desc">Lorem ipsum dolor sit amet and more words here to fill the space.</div>
+						</div>
+					</div>
+					<div class="portfolio-item">
+						<img class="portfolio-item__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/events-minsk-img.jpg" alt="">
+						<div class="portfolio-item__meta">
+							<h4 class="portfolio-item__name">Perevodim.online</h4>
+							<div class="portfolio-item__short-desc">Lorem ipsum dolor sit amet and more words here to fill the space.</div>
+						</div>
+					</div>
+					<div class="portfolio-item">
+						<img class="portfolio-item__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/events-minsk-img.jpg" alt="">
+						<div class="portfolio-item__meta">
+							<h4 class="portfolio-item__name">Perevodim.online</h4>
 							<div class="portfolio-item__short-desc">Lorem ipsum dolor sit amet and more words here to fill the space.</div>
 						</div>
 					</div>

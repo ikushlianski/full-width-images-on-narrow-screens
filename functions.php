@@ -18,8 +18,14 @@ if (function_exists('pll_register_string')) {
 	pll_register_string('Skills', $skills = "Skills");
 	pll_register_string('Personality', $personality = 'Personality');
 	pll_register_string('Portfolio', $portfolio = 'Portfolio');
-  pll_register_string('All works', $portfolio = 'All works');
-  pll_register_string('Contact me', $portfolio = 'Contact me');
+  pll_register_string('All works', $allWorks = 'All works');
+  pll_register_string('Contact me', $contactMe = 'Contact me');
+  pll_register_string('What I already know about', $whatIAlreadyKnow = 'What I already know about');
+	pll_register_string('Further plans to learn', $furtherLearningPlans = 'Further plans to learn');
+	pll_register_string('Skill summary', $skillSummary = 'Skill summary');
+	pll_register_string('Notice', $notice = 'Notice');
+  pll_register_string('My other', $myOtherSkills = 'My other');
+
 }
 if ( ! function_exists( 'ilyaonline_setup' ) ) :
 /**
@@ -176,3 +182,48 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Custom post types
+ */
+function create_posttype() {
+
+    register_post_type( 'skills',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => _x( 'Skills', 'Post Type General Name', 'ilyaonline'),
+                'singular_name' => _x( 'Skill', 'Post Type Singular Name', 'ilyaonline')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'skills'),
+						'supports' => array('title', 'editor')
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
+register_taxonomy(
+            'skill_tag',
+            'skills',
+            array(
+                'hierarchical'  => true,
+                'label'         => __( 'Tags for skills', 'ilyaonline' ),
+                'singular_name' => __( 'Tag for skills', 'ilyaonline' ),
+                'rewrite'       => true,
+                'query_var'     => true
+            )
+        );
+register_taxonomy(
+            'skill_tag_importance',
+            'skills',
+            array(
+                'hierarchical'  => true,
+                'label'         => __( 'Skill importance tags', 'ilyaonline' ),
+                'singular_name' => __( 'Skill importance tag', 'ilyaonline' ),
+                'rewrite'       => true,
+                'query_var'     => true
+            )
+        );
