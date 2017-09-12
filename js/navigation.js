@@ -10,7 +10,7 @@
 	// 	$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
 	// 	$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
 	// });
-	
+
 	var container, button, menu, links, i, len;
 
 	container = document.getElementById( 'site-navigation' );
@@ -128,12 +128,22 @@
 			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
 			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
 		} );
+		container.find( '.dropdown-toggle' ).prev("a").click( function( e ) {
+
+			var _this = $( this );
+			e.preventDefault();
+			_this = $( this ).next('.dropdown-toggle');
+			_this.toggleClass( 'toggle-on' );
+			_this.next( '.sub-menu' ).toggleClass( 'toggled-on' );
+			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+			_this.html( _this.html() === screenReaderText.expand ? screenReaderText.collapse : screenReaderText.expand );
+		} );
 	}
 	$(window).click(function(event) {
 		var otherFirstLevelSubmenus = $("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu.toggled-on");
 		var target = $( event.target );
 
-		if(!target.is(".dropdown-toggle") && ($(".menu-toggle").css("display") == "none")) {
+		if(!target.is(".dropdown-toggle") && !target.is( $('.dropdown-toggle').prev("a") ) && ($(".menu-toggle").css("display") == "none")) {
 			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").removeClass("toggle-on");
 			$("ul.nav-menu").children(".menu-item-has-children").children(".dropdown-toggle").siblings(".sub-menu").removeClass("toggled-on");
 		};
@@ -188,6 +198,14 @@
 				$(this).css({"maxWidth": `${calc}px`, "margin": `1em -${Number(containerMargins) + Number(containerPadding)}px`});
 			}
 		});
+		// fix last flexbox item stretch bug
+		let lastFlexItem = $('.portfolio-item:last-of-type');
+		let lastFlexItemWidth = lastFlexItem.width();
+		if (lastFlexItemWidth > $('.portfolio-item:first-of-type').width()) {
+			lastFlexItem.hide();
+		}
 	});
+
+
 
 } )(jQuery);
