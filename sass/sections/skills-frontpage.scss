@@ -12,16 +12,34 @@ h3.header {
 .section {
     padding: 0.5em;
 }
+.section.about-shortly-wrapper {
+    margin: 0em auto 2em;
+    display: table;
+}
 .section.why-me {
     & .header {
         color: $color__accent-striking;
     }
 }
+
+
+.skill-description {
+    color: $color__text-input;
+    font-weight: normal;
+    display: block;
+}
+
 .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    &__skill-detail {
+
+    }
     & .frontend-skills, .backend-skills, .misc-skills {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        flex-grow: 1;
+        justify-content: flex-start;
         padding: .5em;
     }
     & .frontend-skills-list, .backend-skills-list, .misc-skills-list {
@@ -30,18 +48,20 @@ h3.header {
         box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.3);
         background-color: white;
         list-style: none;
-        margin: 0 0 0.5em 0;
+        margin: 0.2em;
         padding: 0;
+        flex-grow: 1;
+        flex-basis: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+
     }
 }
 
-.skill-description {
-    color: $color__text-input;
-    font-weight: normal;
-    display: block;
-}
+
 .skill-label {
-    background-color: $color__secondary;
+    background-color: $color__accent;
     padding:0.3em;
     display: block;
     font-size: .9em;
@@ -59,8 +79,20 @@ a.skills-list-more {
     text-align: center;
     flex-basis: 125px;
     flex-shrink: 0;
+    flex-grow: 1;
     padding: 0.3em;
     &:last-of-type {
         margin-bottom: 0em;
+    }
+}
+
+///////////////////
+// MEDIA QUERIES //
+///////////////////
+@media (min-width: 1024px){
+    .section.about-shortly-wrapper {
+        width: 80%;
+        margin: 0em auto 2em;
+        display: table;
     }
 }

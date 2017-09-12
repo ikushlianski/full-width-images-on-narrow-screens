@@ -10,6 +10,9 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		&.sub-menu.toggled-on {
+		    box-shadow: none;
+		}
 	}
 }
 .main-navigation-img {
@@ -92,14 +95,15 @@
 	box-sizing: content-box;
 	font-family: 'FontAwesome';
 	content: "";
-	height: 44px;
-	top: 0.15em;
+	height: 32px;
+	top: 0.25em;
 	margin-right: 1em;
 	padding: 0;
 	position: absolute;
 	text-transform: lowercase;
 	right: 6px;
-	width: 44px;
+	width: 32px;
+	pointer-events: none;
 }
 
 .dropdown-toggle:after {
@@ -109,7 +113,7 @@
 	line-height: 27px;
 	position: relative;
 	top: 0;
-	left: 1px;
+	left: 0px;
 	width: 27px;
 }
 .dropdown-toggle:hover:after {
@@ -132,6 +136,7 @@
 .toggled-on .dropdown-toggle {
 	margin-right:1em;
 }
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -180,7 +185,7 @@
 		.current-menu-item > a,
 		.current-menu-ancestor > a {
 			border-bottom: none;
-			color: $color__primary;
+			color: $color__accent-striking;
 		}
 }
 // a div slightly inside .main-navigation
@@ -213,8 +218,9 @@
 }
 
 
+
 // SECTION FOR LARGER SCREENS
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -272,7 +278,7 @@
 		text-align: left;
 	}
 	.main-navigation a,
-	.main-navigation ul ul li:last-child a {
+	.main-navigation .primary-menu .sub-menu.toggled-on li:last-child a {
 		border-bottom: none;
 		display: flex;
 		align-items: center;
@@ -299,6 +305,12 @@
 		margin-left: 0;
 		background: lighten($color__secondary, 5%);
 	}
+	.main-navigation .sub-menu.toggled-on .current-menu-item > a,
+	.main-navigation .sub-menu.toggled-on .current-menu-ancestor > a {
+		font-weight: 700;
+		border-bottom: none;
+		color: $color__accent-striking;
+	}
 	.dropdown-toggle {
 		-webkit-box-sizing: content-box;
 		box-sizing: content-box;
@@ -306,7 +318,7 @@
 		content: "";
 		height: 30px;
 		width: 30px;
-		top: 0.8em;
+		top: 0.9em;
 		position: absolute;
 		text-transform: lowercase;
 	}
@@ -342,19 +354,22 @@
 	.main-navigation ul ul ul a {
     padding-left: 1em;
 	}
-	.main-navigation ul ul a {
-		padding-left: 0.3em;
-	}
 	.main-navigation ul a {
 		padding-left: 0.5em;
 		padding-right: 0.5em;
 		border-bottom: 3px solid transparent;
 	}
 	.main-navigation .menu-item-has-children > a {
-		padding-right: 2.5em;
+		padding-right: 3em;
 	}
 	.main-navigation ul li.current-menu-ancestor {
 
+	}
+	ul.sub-menu.toggled-on {
+		top: 3em;
+	}
+	.sub-menu.toggled-on li {
+		margin-right: 0em;
 	}
 }
 

@@ -1,0 +1,81 @@
+.skillBackground {
+  position: absolute;
+  height: auto;
+  z-index: 1;
+  opacity: 0.15;
+  max-width: 250px;
+  // left: calc(50% - 125px);
+  // top: calc(50% - 125px);
+
+}
+.type-skills {
+  & .entry-content {
+    // position: relative;
+    margin: 1.5em auto;
+    width: 90%;
+    & .how-well-skill {
+      &.panel-heading {
+        background-color: $color__secondary;
+      }
+      & .panel-title {
+        color: $color__background-screen;
+      }
+    }
+  }
+  & .entry-header {
+    background-color: $color__accent;
+    color: $color__background-screen;
+    font-weight: bold;
+    margin-top: inherit;
+    padding: 1em 2em;
+    & .entry-title {
+      font-weight: bold;
+      font-size: 4em;
+      margin: 0.5em auto;
+    }
+  }
+  & .this-skill-now {
+    position: relative;
+  }
+  & .skill-future {
+    & li {
+      color: $color__text-input
+    }
+  }
+  & .skill-short-description {
+    color: $color__background-screen;
+    margin: 0.5em 0;
+    font-weight: normal;
+  }
+  & ul {
+    margin-left: 0em;
+    padding-left: 1.5em;
+  }
+
+}
+
+////////////////
+// MEDIA QUERIES
+////////////////
+@media (min-width: 768px) {
+  .type-skills {
+    & .entry-content {
+      margin: 1.5em auto;
+      width: 75%;
+    }
+    & .entry-header {
+      background-image: url('assets/img/skills-background.jpg');
+      background-position: center;
+      padding: 3em;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .type-skills {
+    & .entry-content {
+      margin: 1.5em auto;
+      width: 50%;
+    }
+  }
+}
