@@ -133,12 +133,14 @@
 			'orderby' => 'term_id'
 		) );
 		foreach ($termsForSkills as $termForSkill) {
+			$termID = $termForSkill->term_id;
+			$term_link = get_term_link( $termForSkill );
 			if ($termForSkill->name != $technology[0]->name)
 			{
 				// create a new loop for each of the remaining sets of technologies and output them
 				$args = array(
 					'post_type' => 'skills',
-					'posts_per_page' => 6,
+					'posts_per_page' => 4,
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -153,23 +155,39 @@
 				if ( $currentlyViewedSkillLoop->have_posts() ) : ?>
 				<div class="related-list">
 					<h3 class="related-list__header">
-
 						<?php
 								echo $termForSkill->name;
 						 ?>
 					</h3>
 					<ul class="related-items-list">
-					<?php while ( $currentlyViewedSkillLoop->have_posts() ) : $currentlyViewedSkillLoop->the_post(); ?>
-							<li class="related-item-wrapper">
-								<a href="<?php the_permalink(); ?>" >
-									<h4 class="related-item__title"><?php the_title(); ?></h4>
-								</a>
-								<div class="related-item__short-description">
-									<?php the_field('short_description') ?>
-								</div>
-							</li>
-					<?php	endwhile; ?>
+						<?php while ( $currentlyViewedSkillLoop->have_posts() ) : $currentlyViewedSkillLoop->the_post(); ?>
+							<?php if( $termID != 250 && $termID != 252 ) :?>
+								<li class="related-item-wrapper">
+									<a href="<?php  the_permalink(); ?>">
+										<h4 class="related-item__title current-skill"><?php the_title(); ?></h4>
+									</a>
+									<div class="related-item__short-description">
+										<?php the_field('short_description') ?>
+									</div>
+								</li>
+							<?php else: ?>
+								<?php // if this is a future skill ?>
+								<li class="related-item-wrapper future-skill">
+									<h4 class="related-item__title future-skill"><?php the_title(); ?></h4>
+									<div class="related-item__short-description future-skill">
+										<?php the_field('short_description') ?>
+									</div>
+								</li>
+								<?php endif; ?>
+						<?php	endwhile; ?>
 					</ul>
+						<?php if ( $args['posts_per_page'] < $currentlyViewedSkillLoop->found_posts ) : ?>
+							<div class="seeAllRelatedLink">
+								<a href="<?php echo $term_link ?>">
+							<?php printf( esc_html__( 'See all %d', 'ilyaonline' ), $currentlyViewedSkillLoop->found_posts );?>
+								</a>
+							</div>
+						<?php endif; ?>
 				</div>
 			<?php endif;
 			wp_reset_postdata();
