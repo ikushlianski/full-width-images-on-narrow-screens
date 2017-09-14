@@ -6,7 +6,7 @@
 	text-transform: uppercase;
 }
 .brand-person-title {
-	background-color: #f44336;
+	background-color: transparentize($color__accent, 0.3);
 	font-size: 0.5em;
 	padding: 0.1em;
 	justify-content: center;
@@ -24,7 +24,7 @@
 	&__brand-menu {
 		// height: 2.5em;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		& li {
 			list-style-type: none;
 		}
@@ -75,7 +75,7 @@
 		}
 	}
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 	.brand-person-image {
 		width: 33.333333%;
 		align-self: center;

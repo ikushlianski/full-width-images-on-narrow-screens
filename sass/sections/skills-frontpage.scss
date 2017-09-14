@@ -11,15 +11,13 @@ h3.header {
 
 .section {
     padding: 0.5em;
-}
-.section.about-shortly-wrapper {
     margin: 0em auto 2em;
-    display: table;
 }
+
 .section.why-me {
-    & .header {
-        color: $color__accent-striking;
-    }
+    // & .header {
+    //     color: $color__accent-striking;
+    // }
 }
 
 
@@ -44,7 +42,7 @@ h3.header {
     }
     & .frontend-skills-list, .backend-skills-list, .misc-skills-list {
         border: 1px solid $color__background-hr;
-        border-radius: 0 0px 5px 5px;
+        border-radius: 5px;
         box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.3);
         background-color: white;
         list-style: none;
@@ -61,11 +59,14 @@ h3.header {
 
 
 .skill-label {
-    background-color: $color__accent;
-    padding:0.3em;
-    display: block;
-    font-size: .9em;
-    color: white;
+  background-color: $color__accent;
+  padding:0.4em;
+  display: block;
+  font-size: .9em;
+  color: white;
+  border-radius: inherit;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 a.skills-list-more {
     font-size: 0.8em;

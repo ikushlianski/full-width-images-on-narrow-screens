@@ -103,7 +103,7 @@
 	text-transform: lowercase;
 	right: 6px;
 	width: 32px;
-	pointer-events: none;
+
 }
 
 .dropdown-toggle:after {
@@ -173,7 +173,9 @@
     	// box-shadow: inset 0px -1px 8px 1px black;
 			box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.5);
 			align-items: center;
-				img {
+			flex-wrap: wrap;
+			padding: 0.5em;
+				& img {
 					padding: 0.5em;
 				}
 		}
@@ -297,6 +299,9 @@
 		margin-left: 0;
 		background: $color__secondary;
 	}
+	.main-navigation ul.sub-menu.toggled-on {
+		    box-shadow: 0px 2px 5px 1px rgba(50, 50, 50, 0.4);
+	}
 	.main-navigation ul ul ul.toggled-on {
 		position: relative;
 		width: 12em;
@@ -309,7 +314,7 @@
 	.main-navigation .sub-menu.toggled-on .current-menu-ancestor > a {
 		font-weight: 700;
 		border-bottom: none;
-		color: $color__accent-striking;
+		color: lighten($color__primary, 20%);
 	}
 	.dropdown-toggle {
 		-webkit-box-sizing: content-box;
@@ -321,6 +326,7 @@
 		top: 0.9em;
 		position: absolute;
 		text-transform: lowercase;
+		pointer-events: none;
 	}
 
 	.dropdown-toggle:after {
@@ -366,7 +372,7 @@
 
 	}
 	ul.sub-menu.toggled-on {
-		top: 3em;
+		top: 3.5em;
 	}
 	.sub-menu.toggled-on li {
 		margin-right: 0em;
