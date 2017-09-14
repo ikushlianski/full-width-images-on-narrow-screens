@@ -4,7 +4,7 @@
   <div id="container">
     <div id="content" role="main">
 
-      <h1 class="page-title"><?php echo $term->name; ?> Archives</h1>
+      <h1 class="page-title"><?php echo $term->name; ?></h1>
 
       <?php if (have_posts()) : ?>
         <?php while (have_posts()) : the_post(); ?>
