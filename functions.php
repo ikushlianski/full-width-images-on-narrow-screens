@@ -7,26 +7,26 @@
  * @package Ilyaonline
  */
 
- // Phrases for translation
-if (function_exists('pll_register_string')) {
- 	pll_register_string('Site author name', $siteAuthorName = "Ilya Kushlianski");
-	pll_register_string('Site person first name', $siteAuthorFirstName = "Ilya");
-	pll_register_string('Site person last name', $siteAuthorLastName = "Kushlianski");
-  pll_register_string('Brand person title', $brandAuthorTitle = "Beginner developer. Fast learner");
-  pll_register_string('Who created theme', $themeCreator = "Theme IlyaOnline created by Ilya Kushlianski");
-  pll_register_string('Why choose me?', $whyMe = "Why choose me?");
-	pll_register_string('Skills', $skills = "Skills");
-	pll_register_string('Personality', $personality = 'Personality');
-	pll_register_string('Portfolio', $portfolio = 'Portfolio');
-  pll_register_string('All works', $allWorks = 'All works');
-  pll_register_string('Contact me', $contactMe = 'Contact me');
-  pll_register_string('What I already know about', $whatIAlreadyKnow = 'What I already know about');
-	pll_register_string('Further plans to learn', $furtherLearningPlans = 'Further plans to learn');
-	pll_register_string('Skill summary', $skillSummary = 'Skill summary');
-	pll_register_string('Notice', $notice = 'Notice');
-  pll_register_string('My other', $myOtherSkills = 'My other');
-
-}
+//  // Phrases for translation
+// if (function_exists('pll_register_string')) {
+//  	pll_register_string('Site author name', $siteAuthorName = "Ilya Kushlianski");
+// 	pll_register_string('Site person first name', $siteAuthorFirstName = "Ilya");
+// 	pll_register_string('Site person last name', $siteAuthorLastName = "Kushlianski");
+//   pll_register_string('Brand person title', $brandAuthorTitle = "Beginner developer. Fast learner");
+//   pll_register_string('Who created theme', $themeCreator = "Theme IlyaOnline created by Ilya Kushlianski");
+//   pll_register_string('Why choose me?', $whyMe = "Why choose me?");
+// 	pll_register_string('Skills', $skills = "Skills");
+// 	pll_register_string('Personality', $personality = 'Personality');
+// 	pll_register_string('Portfolio', $portfolio = 'Portfolio');
+//   pll_register_string('All works', $allWorks = 'All works');
+//   pll_register_string('Contact me', $contactMe = 'Contact me');
+//   pll_register_string('What I already know about', $whatIAlreadyKnow = 'What I already know about');
+// 	pll_register_string('Further plans to learn', $furtherLearningPlans = 'Further plans to learn');
+// 	pll_register_string('Skill summary', $skillSummary = 'Skill summary');
+// 	pll_register_string('Notice', $notice = 'Notice');
+//   pll_register_string('My other', $myOtherSkills = 'My other');
+//
+// }
 if ( ! function_exists( 'ilyaonline_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -127,9 +127,10 @@ add_action( 'widgets_init', 'ilyaonline_widgets_init' );
  */
 function ilyaonline_scripts() {
 	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style('ilyaonline-font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css'); 
 	wp_enqueue_style( 'ilyaonline-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
+	// wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
   wp_enqueue_style( 'ilyaonline-oswald', 'https://fonts.googleapis.com/css?family=Oswald&amp;subset=cyrillic' );
 	wp_enqueue_style( 'ilyaonline-roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic' );
 	// wp_enqueue_script( 'ilyaonline-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
