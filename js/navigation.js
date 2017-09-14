@@ -82,33 +82,33 @@
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
 	 */
-	( function( container ) {
-		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a' );
-
-		if ( 'ontouchstart' in window ) {
-			touchStartFn = function( e ) {
-				var menuItem = this.parentNode, i;
-
-				if ( ! menuItem.classList.contains( 'focus' ) ) {
-					e.preventDefault();
-					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-						if ( menuItem === menuItem.parentNode.children[i] ) {
-							continue;
-						}
-						menuItem.parentNode.children[i].classList.remove( 'focus' );
-					}
-					menuItem.classList.add( 'focus' );
-				} else {
-					menuItem.classList.remove( 'focus' );
-				}
-			};
-
-			for ( i = 0; i < parentLink.length; ++i ) {
-				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
-			}
-		}
-	}( container ) );
+	// ( function( container ) {
+	// 	var touchStartFn, i,
+	// 		parentLink = container.querySelectorAll( '.menu-item-has-children > a' );
+	//
+	// 	if ( 'ontouchstart' in window ) {
+	// 		touchStartFn = function( e ) {
+	// 			var menuItem = this.parentNode, i;
+	//
+	// 			if ( ! menuItem.classList.contains( 'focus' ) ) {
+	// 				e.preventDefault();
+	// 				for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
+	// 					if ( menuItem === menuItem.parentNode.children[i] ) {
+	// 						continue;
+	// 					}
+	// 					menuItem.parentNode.children[i].classList.remove( 'focus' );
+	// 				}
+	// 				menuItem.classList.add( 'focus' );
+	// 			} else {
+	// 				menuItem.classList.remove( 'focus' );
+	// 			}
+	// 		};
+	//
+	// 		for ( i = 0; i < parentLink.length; ++i ) {
+	// 			parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
+	// 		}
+	// 	}
+	// }( container ) );
 
 	function initMainNavigation( container ) {
 		// Add dropdown toggle that display child menu items.
@@ -198,12 +198,19 @@
 				$(this).css({"maxWidth": `${calc}px`, "margin": `1em -${Number(containerMargins) + Number(containerPadding)}px`});
 			}
 		});
-		// fix last flexbox item stretch bug
-		let lastFlexItem = $('.portfolio-item:last-of-type');
-		let lastFlexItemWidth = lastFlexItem.width();
-		if (lastFlexItemWidth > $('.portfolio-item:first-of-type').width()) {
-			lastFlexItem.hide();
+
+		// fix last portfolio-item stretch bug
+		function fixLastFlexItemBug(itemClass){
+			if (itemClass.toString) {
+				let lastFlexItem = $(`.${itemClass}:last-of-type`);
+				let lastFlexItemWidth = lastFlexItem.width();
+				if (lastFlexItemWidth > $(`.${itemClass}:first-of-type`).width()) {
+					lastFlexItem.hide();
+				}
+			}
 		}
+		fixLastFlexItemBug('portfolio-item');
+		// fixLastFlexItemBug('related-item-wrapper');
 	});
 
 
