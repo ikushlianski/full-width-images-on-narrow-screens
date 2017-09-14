@@ -1,8 +1,12 @@
 <?php
-/**
- * Template Name: Ilya Online Front Page
- *
- */
+
+ /**
+  * The template for displaying front page
+  * Template Name: Ilya Online Front Page
+  *
+  *
+  * @package Ilyaonline
+  */
 
 get_header(); ?>
 	<div class="site-branding-image-div">
@@ -12,14 +16,14 @@ get_header(); ?>
 			</div>
 			<div class="brand-person">
 				<span class="brand-person-first-name">
-					<?php pll_e('Ilya'); ?>
+					<?php _e('Ilya', 'ilyaonline'); ?>
 				</span>
 				<span class="brand-person-last-name">
-					<?php pll_e('Kushlianski'); ?>
+					<?php _e('Kushlianski', 'ilyaonline'); ?>
 				</span>
 			</div>
 			<div class="brand-person-title">
-				<?php pll_e('Beginner developer. Fast learner'); ?>
+				<?php _e('Beginner developer. Fast learner', 'ilyaonline'); ?>
 			</div>
 
 			<?php
@@ -40,7 +44,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="section about-shortly-wrapper">
 				<div class="subsection all-skills">
-					<h3 class="header"><?php pll_e('Skills') ?></h3>
+					<h3 class="header"><?php _e('Skills', 'ilyaonline') ?></h3>
 					<div class="skills-list">
 						<ul class="frontend-skills-list">
 							<div class="skill-label">Frontend</div>
@@ -49,7 +53,7 @@ get_header(); ?>
 									<li class="skill-name">JavaScript<small class="skill-description">Solid theory, some hands-on experience</small></li>
 								</div>
 							</div>
-							<a class="skills-list-more" href="#">All frontend skills</a>
+							<a class="skills-list-more" href="#"><?php _e('All frontend skills', 'ilyaonline') ?></a>
 						</ul>
 						<ul class="backend-skills-list">
 							<div class="skill-label">Backend</div>
@@ -61,7 +65,7 @@ get_header(); ?>
 								<li class="skill-name">MySQL<small class="skill-description">Fair</small></li>
 								<li class="skill-name">MongoDB<small class="skill-description">Basic</small></li>
 							</div>
-							<a class="skills-list-more" href="#">All backend skills</a>
+							<a class="skills-list-more" href="#"><?php _e('All backend skills', 'ilyaonline') ?></a>
 						</ul>
 						<ul class="misc-skills-list">
 							<div class="skill-label">Other skills & knowledge</div>
@@ -73,23 +77,23 @@ get_header(); ?>
 								<li class="skill-name">BEM methodology<small class="skill-description">Familiar, trying to implement in projects</small></li>
 								<li class="skill-name">RegEx<small class="skill-description">Solid knowledge</small></li>
 							</div>
-							<a class="skills-list-more" href="#">My other skills</a>
+							<a class="skills-list-more" href="#"><?php _e('My other skills', 'ilyaonline') ?></a>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="section why-me">
-				<h3 class="header">Why hire me</h3>
+				<h3 class="header"><?php esc_html_e('Why hire me', 'ilyaonline') ?></h3>
 				<ul class="why-me-list">
 					<li class="why-me-reason">Ready to hire a beginner but don't want to waste time training them?</li>
 					<li class="why-me-reason">Looking for a reliable guy who will easily fit into your dev team?</li>
 					<li class="why-me-reason">Need a team member who won't stop improving skills and learning?</li>
 				</ul>
-				<a href="" class="cta-button"><?php pll_e('Contact me') ?></a>
-				<a class="why-me-list-more" href="#">How else I can benefit you</a>
+				<a href="" class="cta-button"><?php _e('Contact me', 'ilyaonline') ?></a>
+				<a class="why-me-list-more" href="#"><?php _e('How else I can benefit you', 'ilyaonline') ?></a>
 			</div>
 			<div class="section portfolio">
-				<h3 class="header"><?php pll_e('Portfolio')?></h3>
+				<h3 class="header"><?php _e('Portfolio', 'ilyaonline')?></h3>
 				<div class="portfolio-items-container">
 					<div class="portfolio-item">
 						<img class="portfolio-item__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/friends.jpg" alt="">
@@ -120,7 +124,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<a href="" class="cta-button"><?php pll_e('All works') ?></a>
+				<a href="" class="cta-button"><?php _e('All works', 'ilyaonline') ?></a>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
