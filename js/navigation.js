@@ -202,17 +202,21 @@
 		// fix last portfolio-item stretch bug
 		function fixLastFlexItemBug(itemClass){
 			if (itemClass.toString) {
-				let lastFlexItem = $(`.${itemClass}:last-of-type`);
-				let lastFlexItemWidth = lastFlexItem.width();
-				if (lastFlexItemWidth > $(`.${itemClass}:first-of-type`).width()) {
-					lastFlexItem.hide();
-				}
+				let lastFlexItems = $(`.${itemClass}:last-of-type`);
+				lastFlexItems.each(function(index){
+					// let lastFlexItem = lastFlexItems.eq(index);
+					let lastFlexItemWidth = $(this).width();
+					if ($(this).siblings().length > 1) {
+						if ( lastFlexItemWidth != $(this).siblings().first().width() ) {
+							$(this).hide();
+						}
+					}
+				});
 			}
 		}
 		fixLastFlexItemBug('portfolio-item');
-		// fixLastFlexItemBug('related-item-wrapper');
+		fixLastFlexItemBug('related-item-wrapper');
 	});
-
 
 
 } )(jQuery);
