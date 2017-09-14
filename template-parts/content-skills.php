@@ -20,7 +20,7 @@
 
 		<?php if (get_field('short_description')) : ?>
 			<div class="skill-short-description">
-				<b><?php pll_e('Skill summary') ?>:</b> <?php the_field('short_description') ?>
+				<b><?php _e('Skill summary', 'ilyaonline') ?>:</b> <?php the_field('short_description') ?>
 			</div>
 		<?php endif; ?>
 
@@ -61,7 +61,7 @@
 		<?php if (get_field('long_description')) : ?>
 			<div class="panel panel-success">
 				<div class="how-well-skill panel-heading">
-					<h3 class="panel-title"><?php pll_e('What I already know about')?> <?php the_title() ?></h3>
+					<h3 class="panel-title"><?php the_title() ?><?php _e(': what I already know', 'ilyaonline')?></h3>
 				</div>
 				<div class="this-skill-now panel-body">
 					<img class="skillBackground" src="<?php the_field('skill_image') ?>" alt="">
@@ -73,7 +73,7 @@
 		<?php if (get_field('what_i_want_to_learn')) : ?>
 			<div class="panel panel-default">
 				<div class="skill-future-header panel-heading">
-					<h3 class="panel-title"> <?php pll_e('Further plans to learn')?> <?php the_title() ?></h3>
+					<h3 class="panel-title"><?php the_title() ?><?php _e(': further learning plans', 'ilyaonline')?> </h3>
 				</div>
 				<div class="skill-future panel-body">
 					<?php the_field('what_i_want_to_learn') ?>
@@ -81,54 +81,101 @@
 			</div>
 		<?php endif; ?>
 	</div><!-- .entry-content -->
-	<?php $technology = wp_get_post_terms( get_the_ID(), 'skill_tag' ); ?>
+
+	<?php
+	// ilyaonline_entry_footer();
+	$technology = wp_get_post_terms( get_the_ID(), 'skill_tag' );
+	$args = array(
+		'post_type' => 'skills',
+		'posts_per_page' => 6,
+		'post__not_in' => array( get_the_ID() ),
+		'tax_query' => array(
+			array(
+				'taxonomy' => 'skill_tag',
+				'field' => 'name',
+				'terms' => $technology[0]->name
+			)
+		)
+	);
+
+	$currentlyViewedSkillLoop = new WP_Query( $args ); ?>
 	<footer class="entry-footer">
-		<div class="related-technologies-list">
-			<h3 class="related-technologies-list__header">
-				<?php if ( !has_term([223, 225], 'skill_tag') ) echo pll_e('My other')?>
-				<?php if ( !has_term([223, 225], 'skill_tag') ) :
-						echo mb_strtolower($technology[0]->name);
-					else :
-						echo $technology[0]->name;
-					endif; ?>
-			</h3>
-			<?php
-			// ilyaonline_entry_footer();
-			$args = array(
-				'post_type' => 'skills',
-				'posts_per_page' => 6,
-				'post__not_in' => array( get_the_ID() ),
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'skill_tag',
-						'field' => 'name',
-						'terms' => $technology[0]->name
-					)
-				)
-			);
-
-			$loop = new WP_Query( $args );
-
-			while ( $loop->have_posts() ) : $loop->the_post();
-			?>
-			<a href="<?php the_permalink(); ?>" >
-				<h4><?php the_title(); ?></h4>
-			</a>
-			<div class="related-technologies-list__skill-description">
-				<?php the_field('short_description') ?>
+		<?php if ( $currentlyViewedSkillLoop->have_posts() ) : ?>
+			<div class="related-list">
+				<h3 class="related-list__header">
+					<?php if ( !has_term([223, 225], 'skill_tag') ) echo pll_e('My other')?>
+					<?php if ( !has_term([223, 225], 'skill_tag') ) :
+							echo mb_strtolower($technology[0]->name);
+						else :
+							echo $technology[0]->name;
+						endif; ?>
+				</h3>
+				<ul class="related-items-list">
+				<?php while ( $currentlyViewedSkillLoop->have_posts() ) : $currentlyViewedSkillLoop->the_post(); ?>
+						<li class="related-item-wrapper">
+							<a href="<?php the_permalink(); ?>" >
+								<h4 class="related-item__title"><?php the_title(); ?></h4>
+							</a>
+							<div class="related-item__short-description">
+								<?php the_field('short_description') ?>
+							</div>
+						</li>
+				<?php	endwhile; ?>
+				</ul>
 			</div>
-			<?php
+		<?php endif;
+		wp_reset_postdata(); ?>
 
-					// echo '<img src="' . get_field('field_name') . '" alt="" />';
+		<?php
+		// Begin loop for three other skill fields: for instance, if on 'other skills', then these three loops will show backend and frontend as well as future skills
+		$termsForSkills = get_terms( 'skill_tag', array(
+	    'hide_empty' => false,
+			'orderby' => 'term_id'
+		) );
+		foreach ($termsForSkills as $termForSkill) {
+			if ($termForSkill->name != $technology[0]->name)
+			{
+				// create a new loop for each of the remaining sets of technologies and output them
+				$args = array(
+					'post_type' => 'skills',
+					'posts_per_page' => 6,
+					'orderby' => 'rand',
+					'tax_query' => array(
+						array(
+							'taxonomy' => 'skill_tag',
+							'field' => 'name',
+							'terms' => $termForSkill->name
+						)
+					)
+				);
 
-					// echo '<span class="speaker-title">';
-					// 	the_field('title'); echo ' / '; the_field('company_name');
-					// echo '</p>';
+				$currentlyViewedSkillLoop = new WP_Query( $args );
+				if ( $currentlyViewedSkillLoop->have_posts() ) : ?>
+				<div class="related-list">
+					<h3 class="related-list__header">
 
-					// the_content();
-			endwhile;
+						<?php
+								echo $termForSkill->name;
+						 ?>
+					</h3>
+					<ul class="related-items-list">
+					<?php while ( $currentlyViewedSkillLoop->have_posts() ) : $currentlyViewedSkillLoop->the_post(); ?>
+							<li class="related-item-wrapper">
+								<a href="<?php the_permalink(); ?>" >
+									<h4 class="related-item__title"><?php the_title(); ?></h4>
+								</a>
+								<div class="related-item__short-description">
+									<?php the_field('short_description') ?>
+								</div>
+							</li>
+					<?php	endwhile; ?>
+					</ul>
+				</div>
+			<?php endif;
 			wp_reset_postdata();
-			?>
-		</div>
-	</footer><!-- .entry-footer -->
+			}
+		}
+		?>
+
+		</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
