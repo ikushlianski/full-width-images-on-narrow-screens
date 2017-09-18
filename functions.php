@@ -127,7 +127,7 @@ add_action( 'widgets_init', 'ilyaonline_widgets_init' );
  */
 function ilyaonline_scripts() {
 	wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
-	wp_enqueue_style('ilyaonline-font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css'); 
+	wp_enqueue_style('ilyaonline-font-awesome', get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
 	wp_enqueue_style( 'ilyaonline-style', get_stylesheet_uri() );
 
 	// wp_enqueue_script( 'ilyaonline-fontawesome', 'https://use.fontawesome.com/4afda9f1d5.js' );
@@ -199,7 +199,7 @@ function create_posttype() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'skills'),
-						'supports' => array('title', 'editor')
+						'supports' => array('title', 'editor', 'page-attributes')
         )
     );
 }

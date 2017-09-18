@@ -87,8 +87,9 @@
 	$technology = wp_get_post_terms( get_the_ID(), 'skill_tag' );
 	$args = array(
 		'post_type' => 'skills',
-		'posts_per_page' => 6,
+		'posts_per_page' => 4,
 		'post__not_in' => array( get_the_ID() ),
+		'orderby' => 'rand',
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'skill_tag',
@@ -140,7 +141,7 @@
 				// create a new loop for each of the remaining sets of technologies and output them
 				$args = array(
 					'post_type' => 'skills',
-					'posts_per_page' => 4,
+					'posts_per_page' => 2,
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(
@@ -150,6 +151,11 @@
 						)
 					)
 				);
+				if ($termID == 250 || $termID == 252) {
+					$args['meta_key']	= 'skill_completion_status';
+					$args['orderby']  = 'meta_value';
+					$args['order']    = 'DESC';
+				}
 
 				$currentlyViewedSkillLoop = new WP_Query( $args );
 				if ( $currentlyViewedSkillLoop->have_posts() ) : ?>
@@ -173,7 +179,10 @@
 							<?php else: ?>
 								<?php // if this is a future skill ?>
 								<li class="related-item-wrapper future-skill">
-									<h4 class="related-item__title future-skill"><?php the_title(); ?></h4>
+									<h4 class="related-item__title future-skill"><?php the_title();?></h4>
+									<?php if ( get_field('skill_completion_status') ) :?>
+										<p class="label label-future-skill"><?php the_field('skill_completion_status') ?></p>
+									<?php endif; ?>
 									<div class="related-item__short-description future-skill">
 										<?php the_field('short_description') ?>
 									</div>
