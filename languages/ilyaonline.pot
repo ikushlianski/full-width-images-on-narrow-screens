@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-13 06:53+0000\n"
+"POT-Creation-Date: 2017-09-17 18:17+0000\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,35 +143,56 @@ msgstr ""
 msgid "Skills"
 msgstr ""
 
-#: page-home.php:56
-msgid "All frontend skills"
+#: page-home.php:83
+#, php-format
+msgid "All %s"
 msgstr ""
 
-#: page-home.php:68
-msgid "All backend skills"
-msgstr ""
-
-#: page-home.php:80
-msgid "My other skills"
-msgstr ""
-
-#: page-home.php:86
+#: page-home.php:91
 msgid "Why hire me"
 msgstr ""
 
-#: page-home.php:92
-msgid "Contact me"
+#: page-home.php:94
+msgid "Ready to hire a beginner but don't want to waste time training them?"
 msgstr ""
 
-#: page-home.php:93
-msgid "How else I can benefit you"
+#: page-home.php:95
+msgid "Looking for a reliable guy who will easily fit into your dev team?"
 msgstr ""
 
 #: page-home.php:96
+msgid "Need a team member who won't stop improving skills and learning?"
+msgstr ""
+
+#: page-home.php:99
+msgid ""
+"Having freelance experience myself, I always care about what clients want"
+msgstr ""
+
+#: page-home.php:100
+msgid ""
+"I look at your business as if it was mine and try to find ways to streamline "
+"processes"
+msgstr ""
+
+#: page-home.php:101
+msgid ""
+"Self-taught, I believe that you can achieve what you want if you work hard"
+msgstr ""
+
+#: page-home.php:111
+msgid "Contact me"
+msgstr ""
+
+#: page-home.php:119
+msgid "How else I can benefit you"
+msgstr ""
+
+#: page-home.php:122
 msgid "Portfolio"
 msgstr ""
 
-#: page-home.php:127
+#: page-home.php:131
 msgid "All works"
 msgstr ""
 
@@ -274,6 +295,11 @@ msgstr ""
 
 #: template-parts/content-skills.php:76
 msgid ": further learning plans"
+msgstr ""
+
+#: template-parts/content-skills.php:194
+#, php-format
+msgid "See all %d"
 msgstr ""
 
 #. Name of the theme

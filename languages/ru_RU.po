@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-09-13 06:53+0000\n"
+"POT-Creation-Date: 2017-09-17 18:17+0000\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-09-13 06:55+0000\n"
+"PO-Revision-Date: 2017-09-17 18:18+0000\n"
 "Last-Translator: ilyaonline <kushliansky@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru-RU\n"
@@ -64,11 +64,16 @@ msgstr ""
 msgid "Ilya Online Front Page"
 msgstr ""
 
+#: page-home.php:83
+#, php-format
+msgid "All %s"
+msgstr "Все %s"
+
 #. translators: %s: search query.
 #: search.php:21
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Результаты поиска для: %s"
 
 #. translators: %s: post date.
 #: inc/template-tags.php:29
@@ -126,32 +131,10 @@ msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: template-parts/content-none.php:38
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Извините, ничего по Вашему запросу не найдено. Пожалуйста, попробуйте задать "
-"немного другой запрос."
-
-#: template-parts/content-none.php:44
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr "Кажется, ничего не найдено. Возможно, Вам поможет поиск по сайту."
-
 #: template-parts/content-page.php:22 template-parts/content-skills.php:51
 #: template-parts/content.php:45
 msgid "Pages:"
 msgstr ""
-
-#: template-parts/content-skills.php:64
-msgid ": what I already know"
-msgstr ": что я уже знаю"
-
-#: template-parts/content-skills.php:76
-msgid ": further learning plans"
-msgstr ": дальнейшие планы по изучению"
 
 #. Name of the theme
 msgid "Ilyaonline"
@@ -246,41 +229,80 @@ msgstr "Начинающий разработчик"
 msgid "Skills"
 msgstr "Навыки"
 
-#: page-home.php:56
-msgid "All frontend skills"
-msgstr "Все frontend-навыки"
-
-#: page-home.php:68
-msgid "All backend skills"
-msgstr "Все backend-навыки"
-
-#: page-home.php:80
-msgid "My other skills"
-msgstr "Прочие навыки"
-
-#: page-home.php:86
+#: page-home.php:91
 msgid "Why hire me"
 msgstr "Почему я?"
 
-#: page-home.php:92
+#: page-home.php:94
+msgid "Ready to hire a beginner but don't want to waste time training them?"
+msgstr ""
+"Готовы взять начинающего разработчика, но не хотите тратить время и деньги "
+"на его обучение с нуля?"
+
+#: page-home.php:95
+msgid "Looking for a reliable guy who will easily fit into your dev team?"
+msgstr "Ищете в команду надежного и неконфликтного человека?"
+
+#: page-home.php:96
+msgid "Need a team member who won't stop improving skills and learning?"
+msgstr ""
+"Нужен член команды, который будет постоянно развиваться в сфере "
+"информационных технологий?"
+
+#: page-home.php:99
+msgid ""
+"Having freelance experience myself, I always care about what clients want"
+msgstr ""
+"Эмпатия - моё второе имя. Я всегда думаю прежде всего об интересах клиента"
+
+#: page-home.php:100
+msgid ""
+"I look at your business as if it was mine and try to find ways to streamline "
+"processes"
+msgstr ""
+"Представляю любой бизнес как свой и ищу процессы, которые можно было бы "
+"улучшить"
+
+#: page-home.php:101
+msgid ""
+"Self-taught, I believe that you can achieve what you want if you work hard"
+msgstr ""
+"Освоив азы программирования самостоятельно, верю, что любые цели достижимы, "
+"если упорно работать"
+
+#: page-home.php:111
 msgid "Contact me"
 msgstr "Связаться со мной"
 
-#: page-home.php:93
+#: page-home.php:119
 msgid "How else I can benefit you"
-msgstr "Почему мне стоит работать на Вас"
+msgstr "Почему мне стоит работать у Вас"
 
-#: page-home.php:96
+#: page-home.php:122
 msgid "Portfolio"
 msgstr "Портфолио"
 
-#: page-home.php:127
+#: page-home.php:131
 msgid "All works"
 msgstr "Все работы"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr "Ничего не найдено"
+
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, ничего по Вашему запросу не найдено. Пожалуйста, попробуйте задать "
+"немного другой запрос."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "Кажется, ничего не найдено. Возможно, Вам поможет поиск по сайту."
 
 #: template-parts/content-skills.php:23
 msgid "Skill summary"
@@ -291,6 +313,19 @@ msgstr "Коротко о навыке"
 #, php-format
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "Продолжить чтение<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/content-skills.php:64
+msgid ": what I already know"
+msgstr ": что я уже знаю"
+
+#: template-parts/content-skills.php:76
+msgid ": further learning plans"
+msgstr ": дальнейшие планы по изучению"
+
+#: template-parts/content-skills.php:194
+#, php-format
+msgid "See all %d"
+msgstr "Посмотреть все %d"
 
 #. Description of the theme
 msgid "Description"
