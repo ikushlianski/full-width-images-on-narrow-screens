@@ -168,7 +168,7 @@
 		.main-navigation-img {
 			display:flex;
 			justify-content: center;
-			background-color: #0b0b25;
+			background-color: $color__the-darkest;
 			border-bottom: 1px dashed $color__border-input;
     	// box-shadow: inset 0px -1px 8px 1px black;
 			box-shadow: 0px -3px 10px 0px rgba(0, 0, 0, 0.5);
@@ -194,7 +194,7 @@
 .nav-menu {
 	padding:0.5em;
 	margin-bottom: 3em!important;
-	background-color: #0b0b25;
+	background-color: $color__the-darkest;
 }
 .main-navigation.toggled ul {
 	max-height: calc(100vh - 8em);

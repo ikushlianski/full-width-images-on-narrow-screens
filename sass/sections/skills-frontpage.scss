@@ -33,14 +33,14 @@ h3.header {
     &__skill-detail {
 
     }
-    & .frontend-skills, .backend-skills, .misc-skills {
+    & .skill-kind {
         display: flex;
         flex-wrap: wrap;
         flex-grow: 1;
-        justify-content: flex-start;
+        justify-content: center;
         padding: .5em;
     }
-    & .frontend-skills-list, .backend-skills-list, .misc-skills-list {
+    & .skill-kind-list {
         border: 1px solid $color__background-hr;
         border-radius: 5px;
         box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.3);

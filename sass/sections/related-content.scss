@@ -1,3 +1,12 @@
+p.label-future-skill {
+  margin-bottom: 1rem;
+}
+.label-future-skill {
+  padding: 0.2em 0.4em;
+  background-color: transparentize($color__accent, 0.3);
+  font-weight: 400;
+  display: table;
+}
 .related-list {
   // width: 90%;
   margin: 0 auto;
@@ -16,7 +25,7 @@
     background-color: white;
     box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.3);
     &.future-skill {
-      background-color: rgba(255,255,255,0.3);
+      background-color: rgba(255,255,255,0.4);
     }
 }
 .related-items-list {
@@ -53,6 +62,8 @@ ul.related-items-list {
     text-align: center;
     & a {
       text-decoration: underline;
+      color: $color__border-abbr;
+      font-size: 0.9em;
     }
 }
 
