@@ -206,7 +206,7 @@
 				lastFlexItems.each(function(index){
 					// let lastFlexItem = lastFlexItems.eq(index);
 					let lastFlexItemWidth = $(this).width();
-					if ($(this).siblings().length > 1) {
+					if ($(this).siblings().length > 1 && $(this).prev().width() != lastFlexItemWidth) {
 						if ( lastFlexItemWidth != $(this).siblings().first().width() ) {
 							$(this).hide();
 						}
@@ -216,6 +216,7 @@
 		}
 		fixLastFlexItemBug('portfolio-item');
 		fixLastFlexItemBug('related-item-wrapper');
+		fixLastFlexItemBug('skill-kind-list');
 	});
 
 

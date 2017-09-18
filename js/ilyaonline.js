@@ -42,5 +42,12 @@
         "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
       });
     }
+
+    $('.portfolio-item').css({
+      minHeight: `${$('.portfolio-item').width()/16*9}px`
+    });
+    $('.portfolio-item').on("hover", function(){
+      $(this).find('.portfolio-item__meta').fadeToggle(400);
+    });
   });
 })(jQuery);
