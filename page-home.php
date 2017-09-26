@@ -77,10 +77,16 @@ get_header(); ?>
 							if ( $currentlyViewedSkillLoop->have_posts() ) : ?>
 						<ul class="skill-kind-list">
 							<div class="skill-label"><?php echo $skillTerm->name ?></div>
-								<div class="skill-kind">
+								<div class="skill-kind <?php if ($termID == 250 || $termID == 252) echo 'future-skills' ?>">
 									<div class="skills-list__skill-detail">
 										<?php while ( $currentlyViewedSkillLoop->have_posts() ) : $currentlyViewedSkillLoop->the_post(); ?>
-										<li class="skill-name"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><small class="skill-description"><?php the_field('short_description') ?></small></li>
+										<li class="skill-name">
+										<?php if ($termID != 250 && $termID != 252) : ?>
+											<a href="<?php the_permalink(); ?>"><?php the_title(); ?>
+											</a>
+										<?php else : the_title(); ?>
+										<?php endif; ?>
+											<small class="skill-description"><?php the_field('short_description') ?></small></li>
 										<?php endwhile; ?>
 									</div>
 								</div>
@@ -97,13 +103,14 @@ get_header(); ?>
 			<div class="section why-me">
 				<!-- <h3 class="header"><?php esc_html_e('Why hire me', 'ilyaonline') ?></h3> -->
 				<ul class="why-me-list">
+
 					<div class="why-me-list-wrapper_primary">
 						<li class="why-me-reason item-primary"><?php _e('Ready to hire a beginner but don\'t want to waste time training them?', 'ilyaonline')?></li>
 						<li class="why-me-reason item-primary"><?php _e('Looking for a reliable guy who will easily fit into your dev team?', 'ilyaonline')?></li>
 						<li class="why-me-reason item-primary"><?php _e('Need a team member who won\'t stop improving skills and learning?', 'ilyaonline')?></li>
 					</div>
 					<div class="why-me-list-wrapper_secondary">
-						<li class="why-me-reason item-secondary"><?php _e('Having freelance experience myself, I always care about what clients want', 'ilyaonline')?></li>
+						<li class="why-me-reason item-secondary"><?php _e('Having freelance experience, I always care about what clients want', 'ilyaonline')?></li>
 						<li class="why-me-reason item-secondary"><?php _e('I look at your business as if it was mine and try to find ways to streamline processes', 'ilyaonline')?></li>
 						<li class="why-me-reason item-secondary"><?php _e('Self-taught, I believe that you can achieve what you want if you work hard', 'ilyaonline')?></li>
 					</div>
@@ -125,20 +132,38 @@ get_header(); ?>
 				endif;
 				?>"><?php _e('How else I can benefit you', 'ilyaonline') ?></a>
 			</div>
+      <?php
+      $args = array(
+        'post_type' => 'works',
+        'posts_per_page' => 4,
+        'meta_key' => 'is_work_significant',
+        'orderby' => 'meta_value_num',
+        'order' => 'DESC'
+      );
+      $portfolioItemsLoop = new WP_Query( $args );
+      ?>
+      <?php if ($portfolioItemsLoop->have_posts()) :
+      while( $portfolioItemsLoop->have_posts() ) : $portfolioItemsLoop->the_post();
+      ?>
 			<div class="section portfolio">
-				<h3 class="header"><?php _e('Portfolio', 'ilyaonline')?></h3>
+				<h3 class="header"><?php _e('My works', 'ilyaonline')?></h3>
 				<div class="portfolio-items-container">
-					<div class="portfolio-item">
+					<div class="portfolio-item" style="background-image:url(<?php the_field('work_image'); ?>)">
 						<div class="portfolio-item__meta">
-							<h4 class="portfolio-item__name">Ilya.online</h4>
-							<div class="portfolio-item__short-desc">Lorem ipsum dolor sit amet and more words here to fill the space.</div>
+							<a href="<?php the_permalink(); ?>"><h4 class="portfolio-item__name"><?php the_title(); ?></h4></a>
+							<div class="portfolio-item__short-desc"><?php the_field('work_short_description'); ?></div>
 						</div>
 					</div>
 				</div>
 				<a href="" class="cta-button"><?php _e('All works', 'ilyaonline') ?></a>
 			</div>
+      <?php
+      endwhile;
+      endif;
+      ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+  <?php wp_reset_postdata(); ?>
 
 <?php
 get_footer();
