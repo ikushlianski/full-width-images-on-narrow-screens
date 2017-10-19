@@ -1,0 +1,99 @@
+.questions_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  & .aboutMeBlock {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 350px;
+    align-items: stretch;
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin: 0.5em;
+    box-shadow: 2px 2px 1px transparentize($color__text-input-focus, 0.7);
+    & .aboutMeQuestion {
+      background-color: darken($color__secondary, 10%);
+      color: $color__background-screen;
+      font-size: 1.5em;
+      font-family: Oswald;
+      display: flex;
+      justify-content: center;
+      padding: 0.2em 0.5em;
+    }
+    & .aboutMeAnswer {
+      background-color: $color__secondary;
+      color: $color__background-screen;
+      padding: 1em;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      & a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+    &:nth-child(5n+1) {
+      & .aboutMeQuestion {
+        background-color: darken(transparentize(red, 0.3), 10%);
+        color: $color__background-screen;
+        justify-content: center;
+        text-align: center;
+      }
+      & .aboutMeAnswer {
+        background-color: transparentize(red, 0.3);
+        color: $color__background-screen;
+      }
+    }
+    &:nth-child(5n+2) {
+      & .aboutMeQuestion {
+        background-color: darken(transparentize(orange, 0.1), 9%);
+        color: $color__background-screen;
+        text-shadow: 0.5px 0.5px  grey;
+        text-align: center;
+      }
+      & .aboutMeAnswer {
+        background-color: darken(transparentize(orange, 0.1), 5%);
+        color: $color__background-screen;
+        text-shadow: 0.5px 0.5px  grey;
+      }
+    }
+    &:nth-child(5n+3) {
+      & .aboutMeQuestion {
+        background-color: darken(transparentize(green, 0.3), 10%);
+        color: $color__background-screen;
+        text-align: center;
+      }
+      & .aboutMeAnswer {
+        background-color: transparentize(green, 0.3);
+        color: $color__background-screen;
+      }
+    }
+    &:nth-child(5n+4) {
+      & .aboutMeQuestion {
+        background-color: darken(transparentize(blue, 0.3), 20%);
+        color: $color__background-screen;
+        text-align: center;
+      }
+      & .aboutMeAnswer {
+        background-color: transparentize(blue, 0.3);
+        color: $color__background-screen;
+      }
+    }
+    &:nth-child(5n+5) {
+      & .aboutMeQuestion {
+        background-color: darken(transparentize(purple, 0.3), 10%);
+        color: $color__background-screen;
+        text-align: center;
+      }
+      & .aboutMeAnswer {
+        background-color: transparentize(purple, 0.3);
+        color: $color__background-screen;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+
+}

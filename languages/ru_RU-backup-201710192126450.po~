@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-10-19 21:26+0000\n"
+"POT-Creation-Date: 2017-10-17 22:05+0000\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-10-19 21:26+0000\n"
+"PO-Revision-Date: 2017-10-19 18:30+0000\n"
 "Last-Translator: ilyaonline <kushliansky@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru-RU\n"
@@ -81,306 +81,119 @@ msgid "Ilya Online About Me"
 msgstr ""
 
 #: page-aboutme.php:21
-msgid "Why did you start learning code?"
-msgstr ""
+msgid "Why did you start learning programming?"
+msgstr "Почему ты начал изучать программирование?"
 
 #: page-aboutme.php:23
 msgid ""
 "I have always thought I could program, because a PC was around in my life "
-"from early childhood, but it mostly didn't go further than advanced Word and "
+"form early childhood, but it mostly didn't go further than advanced Word and "
 "Excel, Photoshop or Game Maker."
 msgstr ""
+"Я проводил много времени за компьютером, и часто хотел создавать что-то свое:"
+" если это была игра, то сидел в редакторе, создавал сценарии, в первом "
+"классе был Word 98, постарше - Excel и приколы в Photoshop. Потом наткнулся "
+"на Game Maker и подолгу сидел за ним, строя простые игры. Но никогда не "
+"думал, что буду программировать профессионально."
 
 #: page-aboutme.php:24
 msgid ""
 "Then an idea about a Minsk tourism marketing service came to my mind in 2015,"
-" but after a year of endless Joomla plugins and CSS/html tweaking of default "
-"templates I finally understood I would not make a worthy service without "
-"decent knowledge of programming."
+" but after a year of Joomla plugins and CSS/Html tweaking of default "
+"templates I finally understood I would not make it without decent knowledge "
+"of programming."
 msgstr ""
+"Затем в голову пришла идея создания маркетингового агентства по туризму в "
+"Минске, и начать решил с сайта. Спустя год мучений с дефолтными шаблонами "
+"Joomla, боязливого изучения основ html/css, я понял, что не смогу создать "
+"достойный сайт (не то что сервис) без нормальных знаний кода."
 
-#: page-aboutme.php:26
+#: page-aboutme.php:25
 msgid ""
-"I always code with scaling in mind. Projects will scale even if we do not "
-"think they will. So I always keep scaling in mind when coding."
+"It was scary at first, but then I loved the freedom of opportunities that "
+"open up to a programmer and many other ideas have come to me since then, "
+"some of which have become equally attractive as the tourism marketing "
+"project."
 msgstr ""
+"Сначала было страшно, но открыл Javascript в codeschool и w3schools и дело "
+"пошло. Сначала ничего не было понятно, вопросы \"зачем это, зачем вон то\"..."
+" Но потом, спустя месяцы, мне стала нравиться свобода действий, которая "
+"открывается кодеру, я стал обращать много внимания на то, как устроены "
+"другие сайты."
 
-#: page-aboutme.php:32
-msgid ""
-"There have already been a number of problems I had to solve when learning "
-"proramming basics."
-msgstr ""
-
-#: page-aboutme.php:33
-msgid ""
-"You know that feeling when you stumble upon something and cannot figure out "
-"what's wrong. Then, sometimes after long hours, you figure out... And you "
-"become a better coder."
-msgstr ""
-
-#: page-aboutme.php:34
-msgid ""
-"This feeling is AMAZING! It is worth those \"wasted\" hours of banging your "
-"head against the wall."
-msgstr ""
+#: page-aboutme.php:29
+msgid "Aren't you afraid of difficulties in programming?"
+msgstr "Не боишься, что будет сложно в программировании?"
 
 #: page-aboutme.php:35
+msgid "How do you learn code?"
+msgstr "Как ты учишь программирование?"
+
+#: page-aboutme.php:37
 msgid ""
-"Sometimes it is really disheartening to see the same error popping up again "
-"and again. But overall I am ready to face the numerous challengies, because, "
-"again, they make me better."
+"I use spaced repetition to learn code theory, which I think is the basic "
+"thing you must learn before coding anything."
 msgstr ""
+"Я использую интервальное повторение для изучения теории, потому что теория "
+"без практики всё-таки слепа."
 
-#: page-aboutme.php:36
+#: page-aboutme.php:37
+msgid "What is spaced repetition?"
+msgstr "Что такое интервальное повторение?"
+
+#: page-aboutme.php:38
 msgid ""
-"The less I know about a particular technology the more vigorous I am to "
-"master it and understanding finally comes!"
-msgstr ""
+"In general learning stages are usually as follows: 1) theory from a book or "
+"a video 2) simple examples 3) spaced repetition of the basics during a "
+"couple of weeks 4) see some real example of app building using this "
+"technology 5) build something of my own using this knowledge and googling "
+"things I do not know on the go."
+msgstr "Вообще этапы изучения технологий примерно следующие:"
 
-#: page-aboutme.php:42
+#: page-aboutme.php:39
 msgid ""
-"I believe in the power of spaced repetition and use Anki software to learn "
-"code theory. Anki helps me learn basic and advanced syntax, which does not "
-"replace practice but significantly reduces time one would waste searching "
-"and reading docs for things they once did but forgot."
-msgstr ""
-
-#: page-aboutme.php:50
-msgid "In general learning stages are usually as follows:"
-msgstr ""
-
-#: page-aboutme.php:52
-msgid "theory from a book or a video tutorial"
-msgstr ""
-
-#: page-aboutme.php:53
-msgid ""
-"practice some basic examples of particular pieces of the technology learned"
-msgstr ""
-
-#: page-aboutme.php:54
-msgid "spaced repetition of the basics during a couple of weeks"
-msgstr ""
-
-#: page-aboutme.php:55
-msgid "see some real example of app building using this technology"
-msgstr ""
-
-#: page-aboutme.php:56
-msgid ""
-"build something of my own using this knowledge and googling things I do not "
-"know on the go."
-msgstr ""
-
-#: page-aboutme.php:58
-msgid ""
-"I think one can code something even knowing only basics. There will always "
-"be things you do not know about a specific technology, so sitting and "
+"I think one can code something even knowing only some basics. There will "
+"always be things you do not know about a specific technology, so sitting and "
 "endlessly absorbing information is useless. Better code something simple but "
 "working. I wish I used this approach earlier."
 msgstr ""
 
-#: page-aboutme.php:59
-msgid ""
-"In addition to tutorials I also read industry blogs and sites like habrahabr."
-"ru, CSS Tricks and others. Reading docs as a regular tutorial is a worthy "
-"option sometimes, too."
-msgstr ""
-
-#: page-aboutme.php:60
-msgid "Frequent visitor of Codepen when learning frontend."
-msgstr ""
-
-#: page-aboutme.php:64
+#: page-aboutme.php:43
 msgid "Are you good at maths?"
 msgstr ""
 
-#: page-aboutme.php:66
+#: page-aboutme.php:45
 msgid ""
 "I am a linguist by profession and the syntax of programming languages is "
 "like a piece of cake for me. I had good and great marks at school in all "
 "subjects, including maths and physics, but math exercises did not go beyond "
-"the standard level."
+"the standard level. Difficult math tasks are always a challenge for me and I "
+"do not love them, but when it comes to coding challenges, it gets more "
+"interesting although not less complicated sometimes."
 msgstr ""
 
-#: page-aboutme.php:67
-msgid ""
-"Difficult math tasks are always a challenge for me and I do not love them, "
-"but when it comes to coding challenges, it looks more interesting and real-"
-"life-oriented, which makes me believe that I will be able to cope even with "
-"harder tasks if faced them."
-msgstr ""
-
-#: page-aboutme.php:68
+#: page-aboutme.php:46
 msgid ""
 "Now it's time for algorithms and data structures in my life if I really want "
 "to eventually become a senior coder."
 msgstr ""
 
-#: page-aboutme.php:72
-msgid "What kind of IT job would you prefer?"
+#: page-aboutme.php:50
+msgid "What IT job would you prefer?"
 msgstr ""
 
-#: page-aboutme.php:74
+#: page-aboutme.php:51
 msgid ""
-"I would prefer to work with JS-based web apps and sites. I don't mind using "
-"HTML5/CSS3 one day, Javascript/Angular next day and then a bit of (or "
-"entirely) Laravel or Node as soon as I learn them."
-msgstr ""
-
-#: page-aboutme.php:75
-msgid ""
-"It would be a nice experience to be able to touch in real life the "
-"technologies I know only slightly."
-msgstr ""
-
-#: page-aboutme.php:76
-msgid "In general I am interested in both frontend and backend."
-msgstr ""
-
-#: page-aboutme.php:77
-msgid "Working with JS-based hybrid mobile apps is another promising prospect."
-msgstr ""
-
-#: page-aboutme.php:78
-msgid ""
-"I may consider taking some managerial path in the future to use my knowledge "
-"of finance and psychology as well as quench managerial hunger."
-msgstr ""
-
-#: page-aboutme.php:82
-msgid "What are your concerns about the new job?"
-msgstr ""
-
-#: page-aboutme.php:84
-msgid ""
-"One of the main concerns is that I might work slower than expected through "
-"lack of production experience, but maybe I underestimate my abilities..."
-msgstr ""
-
-#: page-aboutme.php:85
-msgid ""
-"I am a bit afraid of being thrown into thousands of lines of production code "
-"without me having time to figure how things work here. Hope to avoid this "
-"situation."
-msgstr ""
-
-#: page-aboutme.php:89
-msgid "What about your personal qualities and overall attitude to work?"
-msgstr ""
-
-#: page-aboutme.php:91
-msgid ""
-"I am a person who tends to avoid conflicts and try to collaborate even with "
-"difficult people. I prefer to solve problems constructively making "
-"concessions and expecting others to do the same."
-msgstr ""
-
-#: page-aboutme.php:92
-msgid ""
-"I am professional in my attitude to work and cannot let my teammates down."
-msgstr ""
-
-#: page-aboutme.php:93
-msgid ""
-"Being a team player at work I love spending time with my family or alone out "
-"of work. Honestly, I don't like noisy parties and crowds of people all the "
-"time. Better learn something new, watch a quality movie or go for a walk."
-msgstr ""
-
-#: page-aboutme.php:94
-msgid ""
-"I not only listen to other people, but also hear them. I perceive objective "
-"criticism calmly and think of it as a stimulus to my further growth."
-msgstr ""
-
-#: page-aboutme.php:95
-msgid ""
-"However, I would love to meet new interesting people, especially IT "
-"professionals, and learn from them, draw inspiration or maybe collaborate on "
-"some new projects. Speaking in public is one of my strong points, I am not "
-"afraid of that at all."
-msgstr ""
-
-#: page-aboutme.php:99
-msgid "Do you have hobbies?"
-msgstr ""
-
-#: page-aboutme.php:101
-msgid ""
-"After becoming able to code things on my own I got a lot of new ideas which "
-"I never thought I would be able to implement myself: own services, "
-"advertizing, projects to improve my city Minsk and even the whole country in "
-"terms of social and political life."
-msgstr ""
-
-#: page-aboutme.php:102
-msgid ""
-"I love politics, but since Belarus is an authoritarian country and politics "
-"actually does not exist here, I have \"put aside\" politological stuff until "
-"better times."
-msgstr ""
-
-#: page-aboutme.php:103
-msgid ""
-"I love Sweden and Nordic countries for their attitude to life and calmness. "
-"I have lived in Sweden for about nine months and fell in love with it. Maybe "
-"I will work or live there once."
-msgstr ""
-
-#: page-aboutme.php:104
-msgid ""
-"My other interest lies in football, but I don't watch it much, only a bit of "
-"Bundesliga and English Premier League."
-msgstr ""
-
-#: page-aboutme.php:105
-msgid ""
-"Maybe a bit weird to call it a hobby, but I love taking an English Longman "
-"dictionary and just learning new words and phrases. Having a decent level of "
-"English now, I do hope I will once be able to come close to speaking English "
-"as a native speaker."
-msgstr ""
-
-#: page-aboutme.php:106
-msgid "I drink a lot of coffee and tea, often with something sweet :)"
-msgstr ""
-
-#: page-aboutme.php:110
-msgid "What technologies will you study in the future?"
-msgstr ""
-
-#: page-aboutme.php:112
-msgid ""
-"Please see the list of skills I plan to acquire in the future, near or far:"
-msgstr ""
-
-#: page-aboutme.php:119
-msgid "Future skills"
-msgstr ""
-
-#: page-aboutme.php:120
-msgid ""
-"I watch numerous YouTube channels to follow the trending technologies and "
-"webdev news. If I see that a technology is getting more and more popular and "
-"increasing number of tutorials is created for it, I think whether I "
-"absolutely need this technology and monitor the local job market to make the "
-"final decision."
+"I would prefer to work with web apps and sites. I don't mind using HTML one "
+"day, Javascript/Angular next day and then a bit of Laravel or Node when I "
+"learn them. It would be a nice experience to be able to touch in real life "
+"the technologies I know only slightly. Working with hybrid mobile apps is "
+"another promising prospect."
 msgstr ""
 
 #. Name of the template
 msgid "Ilya Online Contacts Page"
 msgstr ""
-
-#: page-contacts.php:29
-msgid ""
-"I want to plunge into the world of the future, the world of the smart and "
-"enterprising people whose income directly depends on their skills and "
-"experience."
-msgstr ""
-"Хочу погрузиться в развивающийся мир, за которым будущее, в котором нет "
-"бездумной политики и зашоренной идеологии. Мир, где уровень дохода напрямую "
-"связан с навыками."
 
 #. Name of the template
 msgid "Ilya Online Front Page"
@@ -462,6 +275,19 @@ msgstr ""
 #. Author URI of the theme
 msgid "http://ilya.online"
 msgstr ""
+
+#: page-aboutme.php:31
+msgid ""
+"There have already been a number of problems I had to solve when learning "
+"proramming basics. You know that feeling when you stumble upon something and "
+"cannot figure out what's wrong. Then, sometimes after long hours, you figure "
+"out... And you become a better coder. This feeling is AMAZING! It is worth "
+"those \"wasted\" hours of banging your head against the wall."
+msgstr ""
+"Бывают дни, когда некая задача никак мне не поддаётся, но чаще всего такие "
+"дни заканчиваются победой. И, допивая 10-ю чашку чая и продирая уставшие "
+"глаза, я все равно благодарен судьбе за то, что дала мне то испытание, "
+"потому что такой челлендж сделал меня только сильнее."
 
 #: 404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -551,31 +377,6 @@ msgid ""
 "My IT knowledge is like small bricks. I dream of building beautiful houses"
 msgstr "Владею знаниями-кирпичиками. Хочу строить красивые дома"
 
-#: page-aboutme.php:25
-msgid ""
-"It was scary at first, but then I loved the freedom of opportunities that "
-"open up to a programmer and many other ideas have come to me since then, "
-"some of which have become equally attractive as the tourism marketing "
-"project."
-msgstr ""
-"Сначала было страшно, но открыл Javascript в codeschool и w3schools и дело "
-"пошло. Сначала ничего не было понятно, вопросы \"зачем это, зачем вон то\"..."
-" Но потом, спустя месяцы, мне стала нравиться свобода действий, которая "
-"открывается кодеру, я стал обращать много внимания на то, как устроены "
-"другие сайты."
-
-#: page-aboutme.php:30
-msgid "Aren't you afraid of difficulties in programming?"
-msgstr "Не боишься, что будет сложно в программировании?"
-
-#: page-aboutme.php:40
-msgid "How do you learn code?"
-msgstr "Как ты учишь программирование?"
-
-#: page-aboutme.php:49
-msgid "What is spaced repetition?"
-msgstr "Что такое интервальное повторение?"
-
 #: page-contacts.php:22
 msgid "Get in touch"
 msgstr "На связи!"
@@ -585,7 +386,7 @@ msgstr "На связи!"
 msgid "Ilya Kushlianski"
 msgstr "Илья Кушлянский"
 
-#: page-contacts.php:30
+#: page-contacts.php:29
 msgid ""
 "I am glad to hear from you! Hope for fruitful cooperation and positive "
 "experience. Have a nice week!"
@@ -593,35 +394,35 @@ msgstr ""
 "Буду рад услышать Ваши предложения! Надеюсь на плодотворное и позитивное "
 "сотрудничество. Приятной Вам недели!"
 
-#: page-contacts.php:35
+#: page-contacts.php:34
 msgid "Uručča neighborhood, Minsk, Belarus"
 msgstr "микр-н Уручье, Минск, Беларусь"
 
-#: page-contacts.php:40
+#: page-contacts.php:39
 msgid "Your message has been sent successfully"
 msgstr "Сообщение отправлено"
 
-#: page-contacts.php:42
+#: page-contacts.php:41
 msgid "Your name"
 msgstr "Ваше имя"
 
-#: page-contacts.php:45
+#: page-contacts.php:44
 msgid "Your mail"
 msgstr "Ваш email"
 
-#: page-contacts.php:48
+#: page-contacts.php:47
 msgid "Subject"
 msgstr "Тема"
 
-#: page-contacts.php:49
+#: page-contacts.php:48
 msgid "Awesome job offer for Ilya!"
 msgstr "Отличное предложение для Ильи!"
 
-#: page-contacts.php:51
+#: page-contacts.php:50
 msgid "Your message"
 msgstr "Ваше сообщение"
 
-#: page-contacts.php:52
+#: page-contacts.php:51
 msgid "Please enter your text here..."
 msgstr "Текст Вашего сообщения..."
 

@@ -45,6 +45,7 @@ get_header(); ?>
 			<div class="section about-shortly-wrapper">
 				<div class="subsection all-skills">
 					<h3 class="header"><?php _e('Skills', 'ilyaonline') ?></h3>
+					<p class="skill_rel_level"><?php _e('As of junior level', 'ilyaonline') ?></p>
 					<div class="skills-list">
 						<?php
 						$skillTerms = get_terms( array(
@@ -142,28 +143,65 @@ get_header(); ?>
       );
       $portfolioItemsLoop = new WP_Query( $args );
       ?>
-      <?php if ($portfolioItemsLoop->have_posts()) :
-      while( $portfolioItemsLoop->have_posts() ) : $portfolioItemsLoop->the_post();
-      ?>
+      <?php if ($portfolioItemsLoop->have_posts()) :?>
 			<div class="section portfolio">
 				<h3 class="header"><?php _e('My works', 'ilyaonline')?></h3>
+				<p class="skill_rel_level"><?php _e('Most of works were created for practice and demonstration', 'ilyaonline') ?></p>
 				<div class="portfolio-items-container">
+      <?php while( $portfolioItemsLoop->have_posts() ) : $portfolioItemsLoop->the_post();
+      ?>
+
 					<div class="portfolio-item" style="background-image:url(<?php the_field('work_image'); ?>)">
 						<div class="portfolio-item__meta">
 							<a href="<?php the_permalink(); ?>"><h4 class="portfolio-item__name"><?php the_title(); ?></h4></a>
 							<div class="portfolio-item__short-desc"><?php the_field('work_short_description'); ?></div>
 						</div>
 					</div>
-				</div>
-				<a href="" class="cta-button"><?php _e('All works', 'ilyaonline') ?></a>
-			</div>
       <?php
-      endwhile;
-      endif;
+			endwhile; wp_reset_postdata();
+			?>
+				</div>
+				<?php
+	      $args = array(
+	        'post_type' => 'smallworks',
+	        'posts_per_page' => 4,
+	        'meta_key' => 'is_work_significant',
+	        'orderby' => 'meta_value_num',
+	        'order' => 'DESC'
+	      );
+	      $smallWorksLoop = new WP_Query( $args );
+				if ($smallWorksLoop->have_posts()) : ?>
+				<h3 class="header"><?php _e('Small examples', 'ilyaonline')?></h3>
+				<div class="portfolio-items-container smallWorks-container">
+					<?php while( $smallWorksLoop->have_posts() ) : $smallWorksLoop->the_post();
+					?>
+					<div class="portfolio-item smallWork" style="background-image:url(<?php the_field('work_image'); ?>)">
+						<div class="portfolio-item__meta">
+							<a><h4 class="portfolio-item__name"><?php the_title(); ?></h4></a>
+							<div class="portfolio-item__short-desc"><?php the_field('work_short_description'); ?></div>
+
+							<?php	if ( get_field('work_url') ) : ?>
+							<a class="see-project-live-link" target="_blank" href="<?php the_field('work_url'); ?>">
+								<button class="btn btn-success see-project-live" role="button">
+									<?php _e('See live', 'ilyaonline')?>
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+								</button>
+							</a>
+							<?php endif; ?>
+
+						</div>
+					</div>
+					<?php
+					endwhile; wp_reset_postdata();
+					?>
+				</div>
+				<?php endif; ?>
+				<a href="<?php echo get_post_type_archive_link( 'works' ); ?>" class="cta-button"><?php _e('All works', 'ilyaonline') ?></a>
+			</div>
+      <?php endif;
       ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-  <?php wp_reset_postdata(); ?>
 
 <?php
 get_footer();

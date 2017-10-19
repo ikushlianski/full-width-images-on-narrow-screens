@@ -51,7 +51,7 @@ gulp.task('scripts', function() {
 // 		.pipe(gulp.dest('./css')); // Выгружаем в папку app/css
 // });
 
-gulp.task('watch', ['browser-sync', /*'css-libs',*/ 'scripts'], function() {
+gulp.task('watch', ['browser-sync', 'img',/*'css-libs',*/ 'scripts'], function() {
 	gulp.watch('./sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
 	gulp.watch('./**/*.html', browserSync.reload); // Наблюдение за HTML файлами в корне проекта
 	gulp.watch('./**/*.php', browserSync.reload); // Наблюдение за PHP файлами в корне проекта

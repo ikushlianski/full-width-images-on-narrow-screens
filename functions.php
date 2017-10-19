@@ -160,6 +160,28 @@ function ilyaonline_pingback_header() {
 add_action( 'wp_head', 'ilyaonline_pingback_header' );
 
 /**
+ * Implement the send mail feature.
+ */
+function send_my_awesome_form(){
+
+	if ( !empty($_POST['submitButton']) ) {
+		$to = 'kushliansky@gmail.com';
+		$author = $_POST['authorName'];
+	  $subject = htmlspecialchars($_POST['subjectName']) . ' from ' . $author;
+	  $body = $_POST['comment'];
+	  $fromMail = filter_var($_POST['authorMail'], FILTER_SANITIZE_EMAIL);
+	  // $headers = array("Content-Type: text/html; charset=UTF-8; From: <$fromMail>");
+		$headers = 'MIME-Version: 1.0' . "\r\n";
+		$headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+		$headers .= 'From:  ' . $author . ' <' . $fromMail .'>' . " \r\n" .
+            'Reply-To: '.  $fromMail;
+
+	  wp_mail( $to, $subject, $body, $headers );
+	}
+}
+add_action('wp', 'send_my_awesome_form');
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
@@ -202,6 +224,45 @@ function create_posttype() {
 						'supports' => array('title', 'editor', 'page-attributes')
         )
     );
+		register_post_type( 'works',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => _x( 'Works', 'Post Type General Name', 'ilyaonline'),
+                'singular_name' => _x( 'Work', 'Post Type Singular Name', 'ilyaonline')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'works'),
+						'supports' => array('title', 'editor', 'page-attributes')
+        )
+    );
+		register_post_type( 'smallworks',
+		// CPT Options
+				array(
+						'labels' => array(
+								'name' => _x( 'Small works', 'Post Type General Name', 'ilyaonline'),
+								'singular_name' => _x( 'Small work', 'Post Type Singular Name', 'ilyaonline')
+						),
+						'public' => true,
+						'has_archive' => true,
+						'rewrite' => array('slug' => 'smallworks'),
+						'supports' => array('title', 'editor', 'page-attributes')
+				)
+		);
+		register_post_type( 'reviews',
+		// CPT Options
+				array(
+						'labels' => array(
+								'name' => _x( 'Reviews', 'Post Type General Name', 'ilyaonline'),
+								'singular_name' => _x( 'Review', 'Post Type Singular Name', 'ilyaonline')
+						),
+						'public' => true,
+						'has_archive' => true,
+						'rewrite' => array('slug' => 'reviews'),
+						'supports' => array('title', 'editor', 'page-attributes')
+				)
+		);
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
@@ -228,3 +289,18 @@ register_taxonomy(
                 'query_var'     => true
             )
         );
+
+// fix bug when custom posts archive pagination does not work on page 2 and subsequent
+$option_posts_per_page = get_option( 'posts_per_page' );
+add_action( 'init', 'my_modify_posts_per_page', 0);
+function my_modify_posts_per_page() {
+	add_filter( 'option_posts_per_page', 'my_option_posts_per_page' );
+}
+function my_option_posts_per_page( $value ) {
+	global $option_posts_per_page;
+	if ( is_tax( 'skill_tag') ) {
+		return 1;
+	} else {
+		return $option_posts_per_page;
+	}
+}

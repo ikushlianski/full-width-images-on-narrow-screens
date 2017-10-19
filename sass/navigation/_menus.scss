@@ -144,21 +144,22 @@
 }
 .menu-toggle {
 	position:fixed;
+	padding: 1em 1.5em;
 	z-index: 100;
-	bottom: 1em;
+	bottom: 0.5em;
 	left: 1em;
 	font-size: 1em;
 	text-transform: uppercase;
 	background-color: $color__the-darkest;
 	color: white;
 	transition: all 0.2s ease-in;
-	border: 1px solid white;
+	border: 1px solid $color__background-hr;
 }
 .menu-toggle.ishidden {
-	bottom: -3em;
+	bottom: -5em;
 }
 .toggled .menu-toggle.ishidden{
-	bottom: 1em;
+	bottom: 0.5em;
 }
 .main-navigation.toggled {
 	position:fixed;
@@ -187,7 +188,7 @@
 		.current-menu-item > a,
 		.current-menu-ancestor > a {
 			border-bottom: none;
-			color: $color__accent-striking;
+			color: transparentize($color__accent-striking, 0.1);
 		}
 }
 // a div slightly inside .main-navigation
@@ -215,11 +216,24 @@
 				padding: 0.5em;
 			}
 }
+ul.sub-menu.toggled-on li {
+	margin-right: 0em;
+	& a {
+		font-size: 0.9em;
+	}
+}
 .main-navigation.toggled ul.sub-menu li {
     margin-left: 0em;
 }
 
-
+@media screen and (orientation: landscape) {
+	.main-navigation.toggled .main-navigation-img  {
+		display: none;
+	}
+	.main-navigation.toggled ul {
+		max-height: calc(100vh - 5em);
+	}
+}
 
 // SECTION FOR LARGER SCREENS
 @media screen and (min-width: 768px) {
@@ -250,7 +264,7 @@
 		justify-content: space-between;
 	}
 	.nav-menu {
-		padding: 0 0 0 0;
+		padding: 0;
 		background-color: transparent;
 		margin-bottom: 0em!important;
 	}
@@ -374,9 +388,10 @@
 	ul.sub-menu.toggled-on {
 		top: 3.5em;
 	}
-	.sub-menu.toggled-on li {
-		margin-right: 0em;
-	}
+	ul.sub-menu.toggled-on li a {
+    font-size: 0.8em;
+}
+
 }
 
 .comment-navigation,

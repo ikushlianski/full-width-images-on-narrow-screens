@@ -200,23 +200,30 @@
 		});
 
 		// fix last portfolio-item stretch bug
-		function fixLastFlexItemBug(itemClass){
-			if (itemClass.toString) {
+		function fixLastFlexItemBug(itemClass, parentClass){
+			if (!parentClass) {
 				let lastFlexItems = $(`.${itemClass}:last-of-type`);
 				lastFlexItems.each(function(index){
 					// let lastFlexItem = lastFlexItems.eq(index);
 					let lastFlexItemWidth = $(this).width();
-					if ($(this).siblings().length > 1 && $(this).prev().width() != lastFlexItemWidth) {
-						if ( lastFlexItemWidth != $(this).siblings().first().width() ) {
+					if ( ($(this).siblings().length > 0) && ($(this).prev().width() + 30 < lastFlexItemWidth) ) {
 							$(this).hide();
-						}
+					}
+				});
+			} else {
+				let lastFlexItems = $(`.${parentClass} .${itemClass}:last-of-type`);
+				lastFlexItems.each(function(index){
+					// let lastFlexItem = lastFlexItems.eq(index);
+					let lastFlexItemWidth = $(this).width();
+					if ( ($(this).siblings().length > 0) && ($(this).prev().width() + 30 < lastFlexItemWidth) ) {
+							$(this).hide();
 					}
 				});
 			}
 		}
 		fixLastFlexItemBug('portfolio-item');
-		fixLastFlexItemBug('related-item-wrapper');
-		fixLastFlexItemBug('skill-kind-list');
+		fixLastFlexItemBug('related-item-wrapper', 'related-items-list');
+		fixLastFlexItemBug('skill-kind-list', 'skills-list');
 	});
 
 

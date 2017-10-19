@@ -1,0 +1,107 @@
+.contact-detail {
+  padding-bottom: 2em!important;
+  flex-basis: 300px;
+  position: relative;
+  flex-grow: 1;
+  text-shadow: 0.5px 0.5px white;
+}
+.contact-form-wrapper {
+  flex-grow: 1;
+  flex-basis: 300px;
+  margin-top: 2em;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: white;
+  box-shadow: 1px 1px 20px 10px transparentize($color__text-input, 0.8);
+
+  & input, textarea {
+    border-color: $color__background-hr;
+    border-radius: 0px;
+    &[placeholder] {
+      font-size: 0.9em;
+    }
+  }
+  & input[type=submit] {
+    margin: 1em auto;
+    width: 25%;
+  }
+  & label {
+    margin-top: 1em;
+    color: $color__accent;
+  }
+}
+.entry-content {
+  &.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    & > * {
+      padding: 1em;
+    }
+  }
+}
+.entry-header_contacts {
+  background-image: url('__dist/img/contacts_back.jpg');
+  background-size: cover;
+  background-position-x: 72%;
+  // background-color: lighten($color__text-input-focus, 10%);
+}
+.entry-footer_red {
+  background-color: $color__accent;
+  color: $color__background-screen;
+}
+i.fa {
+    width: 2em;
+    text-align: center;
+    color: $color__text-input;
+}
+.messageStatus {
+  color: #4CAF50;
+  text-align: center;
+}
+.name-reminder {
+  text-transform: uppercase;
+  color: $color__accent;
+  font-family: oswald;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.page-template-page-contacts .site-footer {
+  background-color: transparentize($color__accent, 0.0);
+  & .site-info {
+    color: $color__background-screen;
+  }
+}
+.pre-contact {
+  margin: 2em 0em;
+  font-size: 1.4em;
+  color: $color__text-input;
+}
+input[type="submit"].submit-message {
+  background: $color__accent;
+  color: $color__background-screen;
+  border: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+.way-to-contact {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0em;
+}
+
+////////////////
+// Media queries
+////////////////
+@media (min-width: 768px) {
+  .entry-content_wide {
+    width: 75%;
+  }
+  .entry-header_contacts {
+    background-position-x: center;
+  }
+}

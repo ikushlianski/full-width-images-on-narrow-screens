@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header page-heading">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -141,7 +141,7 @@
 				// create a new loop for each of the remaining sets of technologies and output them
 				$args = array(
 					'post_type' => 'skills',
-					'posts_per_page' => 2,
+					'posts_per_page' => 4,
 					'orderby' => 'rand',
 					'tax_query' => array(
 						array(

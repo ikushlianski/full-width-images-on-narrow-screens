@@ -43,11 +43,27 @@
       });
     }
 
-    $('.portfolio-item').css({
-      minHeight: `${$('.portfolio-item').width()/16*9}px`
+    // hide text on portfolio items on larger screens
+
+    $('.portfolio-item').each(function(){
+      $(this).css({
+        minHeight: `${$(this).width()/16*9}px`
+      })
     });
-    $('.portfolio-item').on("hover", function(){
-      $(this).find('.portfolio-item__meta').fadeToggle(400);
+    // if ( $('.portfolio-item').width() >= 300 ) {
+    //   $('.portfolio-item').on("hover", function(){
+    //     $(this).find('.portfolio-item__meta').fadeToggle(400);
+    //   });
+    // }
+    $('.submit-message').on('click', function(event){
+      let textarea = $('.contact-form').find('textarea');
+      if (textarea.val().length < 5) {
+        event.preventDefault();
+        alert('Please submit a message text');
+        return false;
+      } else {
+        return true;
+      }
     });
   });
 })(jQuery);

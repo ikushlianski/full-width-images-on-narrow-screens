@@ -8,8 +8,8 @@
   // top: calc(50% - 125px);
 
 }
-.type-skills {
-  & .entry-content {
+
+  .entry-content {
     // position: relative;
     margin: 1.5em auto;
     width: 90%;
@@ -23,7 +23,7 @@
       }
     }
   }
-  & .entry-header {
+  .entry-header {
     background-color: $color__accent;
     color: $color__background-screen;
     font-weight: bold;
@@ -35,15 +35,15 @@
       margin: 0.5em auto;
     }
   }
-  & .this-skill-now {
+  .this-skill-now {
     position: relative;
   }
-  & .skill-future {
+  .skill-future {
     & li {
       color: $color__text-input
     }
   }
-  & .skill-short-description {
+  .skill-short-description, .short-description {
     color: $color__background-screen;
     margin: 0.5em 0;
     font-weight: normal;
@@ -52,43 +52,39 @@
     background-color: transparentize($color__text-input-focus, 0.8);
     font-size: 0.9em;
   }
-  & ul {
+  ul {
     margin-left: 0em;
     padding-left: 1.5em;
   }
 
-}
+
 
 ////////////////
 // MEDIA QUERIES
 ////////////////
 @media (min-width: 768px) {
-  .type-skills {
-    & .entry-content {
-      margin: 1.5em auto;
-      width: 75%;
+  .entry-content {
+    margin: 1.5em auto;
+    width: 75%;
+    font-size: 1em;
+  }
+  & .entry-header {
+    background-image: url('assets/img/skills-background.jpg');
+    background-position: center;
+    padding: 3em;
+    & .skill-short-description {
+      background-color: transparentize($color__the-darkest, 0.7);
       font-size: 1em;
     }
-    & .entry-header {
-      background-image: url('assets/img/skills-background.jpg');
-      background-position: center;
-      padding: 3em;
-      & .skill-short-description {
-        background-color: transparentize($color__the-darkest, 0.7);
-        font-size: 1em;
-      }
-      & .entry-title {
-        font-size: 4em;
-      }
+    & .entry-title {
+      font-size: 4em;
     }
   }
 }
 
 @media (min-width: 1024px) {
-  .type-skills {
-    & .entry-content {
-      margin: 1.5em auto;
-      width: 50%;
-    }
+  & .entry-content {
+    margin: 1.5em auto;
+    width: 60%;
   }
 }

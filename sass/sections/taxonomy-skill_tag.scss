@@ -1,0 +1,91 @@
+.page-heading {
+  background-image: url('assets/img/skills-background.jpg');
+  background-position: center;
+  padding: 4em 1em;
+  text-align: center;
+  & .page-title {
+    color: $color__background-screen;
+    font-size: 2em;
+    font-weight: bold;
+  }
+}
+.entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em 1em;
+  padding: 0.5em;
+  border-radius: 1px;
+  background-color: white;
+  box-shadow: 0px 0.5px 0.5px rgba(0,0,0,0.3);
+  box-shadow: 0.5px 0.5px 0.5px transparentize($color__text-input-focus, 0.5);
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-basis: 400px;
+  &.work {
+    flex-grow: 1;
+    align-items: center;
+  }
+  & h3 {
+    @extend .related-item__title;
+    font-size: 1.4em;
+    margin-bottom: 0.5em;
+    margin-top: 0em;
+    font-weight: bold;
+  }
+  &__image {
+
+    padding: 0.5em;
+    border-radius: 50%;
+    &_square {
+      border-radius: 10px;
+    }
+    &Link {
+      flex-basis: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 0;
+      .work & {
+        flex-basis: 350px;
+        flex-grow: 1;
+      }
+    }
+  }
+  &__details-wrapper {
+    padding: 0.5em;
+    flex-basis: 230px;
+    flex-grow: 1;
+    .work & {
+      flex-basis: 300px;
+      flex-grow: 1;
+    }
+  }
+  &__summary {
+    @extend .related-item__short-description;
+  }
+}
+.entries_wrapper {
+  @extend .entry-content;
+  width: 100%;
+  font-size: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+////////////////
+// MEDIA QUERIES
+////////////////
+@media (min-width: 768px) {
+  .page-heading {
+    padding: 3em;
+    text-align: left;
+    & .page-title {
+      color: $color__background-hr;
+      font-size: 3em;
+      font-weight: bold;
+    }
+  }
+}

@@ -21,9 +21,15 @@ a.cta-button {
   color: $color__background-body;
   background-image: url('./__dist/img/whyme_back.jpg');
   background-size: cover;
+  background-position-x: 50%;
   padding: 2em;
   & .header {
     color: $color__background-hr;
+  }
+  & .fa-thumbs-o-up {
+    font-size: 4em;
+    opacity: 0.5;
+    display: none;
   }
 }
 .why-me-list .reason-description {
@@ -32,10 +38,11 @@ a.cta-button {
 a.why-me-list-more {
   @extend .skills-list-more;
   color: $color__accent-striking;
+  text-shadow: 0.5px 0.5px transparentize($color__text-input-focus, 0.5);
 }
 ul.why-me-list {
     border: 1px solid rgba(255, 255, 255, 0.2);
-    margin: 2em 0em;
+    margin: 2em auto;
     padding: 1em;
     list-style-type: none;
     display: flex;
@@ -59,10 +66,11 @@ li.why-me-reason {
     &.item-primary {
     text-align: center;
     padding: 0 0.5em;
+    text-shadow: 1px 0.5px rgba(0,0,0,0.5);
       &::after {
         content: '';
         width: 15%;
-        border-bottom: 1px solid $color__secondary;
+        border-bottom: 1px solid $color__accent-striking;
         display: block;
         margin: 2em auto;
       }
@@ -103,15 +111,24 @@ li.why-me-reason {
 
     font-size: 1em;
   }
+  .section.why-me {
+    & .fa-thumbs-o-up {
+      font-size: 4em;
+      opacity: 0.5;
+      display: inline-block;
+
+    }
+  }
+
 }
 
 @media (min-width: 1024px) {
   ul.why-me-list {
-
+    width: 80%;
     & .why-me-list-wrapper {
 
       &_primary {
-        flex-basis: 25%;
+        flex-basis: 40%;
         flex-shrink: 0;
         flex-grow: 0;
       }
