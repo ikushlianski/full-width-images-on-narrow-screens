@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2017-10-23 18:15+0000\n"
+"POT-Creation-Date: 2017-10-22 19:11+0000\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,14 +32,6 @@ msgstr ""
 #: 404.php:51
 #, php-format
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
-#: archive-works.php:73 page-home.php:172
-msgid "Small examples"
-msgstr ""
-
-#: archive-works.php:85 page-home.php:184
-msgid "See live"
 msgstr ""
 
 #. translators: 1: title.
@@ -174,18 +166,18 @@ msgid ""
 "My IT knowledge is like small bricks. I dream of building beautiful houses"
 msgstr ""
 
-#: page-aboutme.php:25
+#: page-aboutme.php:21
 msgid "Why did you start learning code?"
 msgstr ""
 
-#: page-aboutme.php:31
+#: page-aboutme.php:23
 msgid ""
 "I have always thought I could program, because a PC was around in my life "
 "from early childhood, but it mostly didn't go further than advanced Word and "
 "Excel, Photoshop or Game Maker."
 msgstr ""
 
-#: page-aboutme.php:32
+#: page-aboutme.php:24
 msgid ""
 "Then an idea about a Minsk tourism marketing service came to my mind in 2015,"
 " but after a year of endless Joomla plugins and CSS/html tweaking of default "
@@ -193,7 +185,7 @@ msgid ""
 "decent knowledge of programming."
 msgstr ""
 
-#: page-aboutme.php:33
+#: page-aboutme.php:25
 msgid ""
 "It was scary at first, but then I loved the freedom of opportunities that "
 "open up to a programmer and many other ideas have come to me since then, "
@@ -201,7 +193,7 @@ msgid ""
 "project."
 msgstr ""
 
-#: page-aboutme.php:34
+#: page-aboutme.php:26
 msgid ""
 "After becoming able to code things on my own I got a lot of new ideas which "
 "I never thought I would be able to implement myself: own services, "
@@ -209,47 +201,47 @@ msgid ""
 "terms of social and political life."
 msgstr ""
 
-#: page-aboutme.php:43
+#: page-aboutme.php:30
 msgid "Aren't you afraid of difficulties in programming?"
 msgstr ""
 
-#: page-aboutme.php:49
+#: page-aboutme.php:32
 msgid ""
 "There have already been a number of problems I had to solve when learning "
 "proramming basics."
 msgstr ""
 
-#: page-aboutme.php:50
+#: page-aboutme.php:33
 msgid ""
 "You know that feeling when you stumble upon something and cannot figure out "
 "what's wrong. Then, sometimes after long hours, you figure out... And you "
 "become a better coder."
 msgstr ""
 
-#: page-aboutme.php:51
+#: page-aboutme.php:34
 msgid ""
 "This feeling is AMAZING! It is worth those \"wasted\" hours of banging your "
 "head against the wall."
 msgstr ""
 
-#: page-aboutme.php:52
+#: page-aboutme.php:35
 msgid ""
 "Sometimes it is really disheartening to see the same error popping up again "
 "and again. But overall I am ready to face the numerous challengies, because, "
 "again, they make me better."
 msgstr ""
 
-#: page-aboutme.php:53
+#: page-aboutme.php:36
 msgid ""
 "The less I know about a particular technology the more vigorous I am to "
 "master it and understanding finally comes!"
 msgstr ""
 
-#: page-aboutme.php:62
+#: page-aboutme.php:40
 msgid "How do you learn code?"
 msgstr ""
 
-#: page-aboutme.php:68
+#: page-aboutme.php:42
 msgid ""
 "I believe in the power of spaced repetition and use Anki software to learn "
 "code theory. Anki helps me learn basic and advanced syntax, which does not "
@@ -257,38 +249,38 @@ msgid ""
 "and reading docs for things they once did but forgot."
 msgstr ""
 
-#: page-aboutme.php:75
+#: page-aboutme.php:49
 msgid "What is spaced repetition?"
 msgstr ""
 
-#: page-aboutme.php:76
+#: page-aboutme.php:50
 msgid "In general learning stages are usually as follows:"
 msgstr ""
 
-#: page-aboutme.php:78
+#: page-aboutme.php:52
 msgid "theory from a book or a video tutorial"
 msgstr ""
 
-#: page-aboutme.php:79
+#: page-aboutme.php:53
 msgid ""
 "practice some basic examples of particular pieces of the technology learned"
 msgstr ""
 
-#: page-aboutme.php:80
+#: page-aboutme.php:54
 msgid "spaced repetition of the basics during a couple of weeks"
 msgstr ""
 
-#: page-aboutme.php:81
+#: page-aboutme.php:55
 msgid "see some real example of app building using this technology"
 msgstr ""
 
-#: page-aboutme.php:82
+#: page-aboutme.php:56
 msgid ""
 "build something of my own using this knowledge and googling things I do not "
 "know on the go."
 msgstr ""
 
-#: page-aboutme.php:84
+#: page-aboutme.php:58
 msgid ""
 "I think one can code something even knowing only basics. There will always "
 "be things you do not know about a specific technology, so sitting and "
@@ -296,22 +288,22 @@ msgid ""
 "working. I wish I used this approach earlier."
 msgstr ""
 
-#: page-aboutme.php:85
+#: page-aboutme.php:59
 msgid ""
 "In addition to tutorials I also read industry blogs and sites like habrahabr."
 "ru, CSS Tricks and others. Reading docs as a regular tutorial is a worthy "
 "option sometimes, too."
 msgstr ""
 
-#: page-aboutme.php:86
+#: page-aboutme.php:60
 msgid "Frequent visitor of Codepen and caniuse.com when learning frontend."
 msgstr ""
 
-#: page-aboutme.php:95
+#: page-aboutme.php:64
 msgid "Are you good at maths?"
 msgstr ""
 
-#: page-aboutme.php:101
+#: page-aboutme.php:66
 msgid ""
 "I have a linguistic and international relations diploma, so the syntax of "
 "English-like programming languages is like a piece of cake for me. I had "
@@ -319,7 +311,7 @@ msgid ""
 "but math exercises did not go beyond the standard level."
 msgstr ""
 
-#: page-aboutme.php:102
+#: page-aboutme.php:67
 msgid ""
 "Difficult math tasks are always a challenge for me and I do not love them, "
 "but when it comes to coding challenges, it looks more interesting and real-"
@@ -327,134 +319,90 @@ msgid ""
 "harder tasks if faced them."
 msgstr ""
 
-#: page-aboutme.php:103
+#: page-aboutme.php:68
 msgid ""
 "Now it's time for algorithms and data structures in my life if I really want "
 "to eventually become a senior coder."
 msgstr ""
 
-#: page-aboutme.php:112
-msgid "Do you have work experience?"
-msgstr ""
-
-#: page-aboutme.php:118
-msgid "I have never worked for an IT company professionally."
-msgstr ""
-
-#: page-aboutme.php:119
-msgid ""
-"The more I learn web development the more passion I have for this industry "
-"and hope I already meet the criteria for a promising webdev position."
-msgstr ""
-
-#: page-aboutme.php:120
-msgid ""
-"In August 2017, I switched from pure theory to practice and I am currently "
-"working on a number of my own web projects that I hope to finish some time "
-"in the future."
-msgstr ""
-
-#: page-aboutme.php:121
-msgid ""
-"My previous work experience includes translating into English and in reverse "
-"order for a number of media. I also worked with various clients outside the "
-"regular job. My freelance experience taught me how important it is to "
-"communicate with clients in the right way and build relations that will "
-"bring profits."
-msgstr ""
-
-#: page-aboutme.php:122
-msgid ""
-"Every work that I previously had dealt in any way with websites, SEO and "
-"content management."
-msgstr ""
-
-#: page-aboutme.php:131
+#: page-aboutme.php:72
 msgid "What kind of IT job would you prefer?"
 msgstr ""
 
-#: page-aboutme.php:137
+#: page-aboutme.php:74
 msgid ""
 "I would prefer to work with JS-based web apps and sites. I don't mind using "
 "HTML5/CSS3 one day, Javascript/Angular next day and then a bit of (or "
 "entirely) Laravel or Node as soon as I learn them."
 msgstr ""
 
-#: page-aboutme.php:138
+#: page-aboutme.php:75
 msgid ""
 "It would be a nice experience to be able to touch in real life the "
 "technologies I know only slightly."
 msgstr ""
 
-#: page-aboutme.php:139
+#: page-aboutme.php:76
 msgid "In general I am interested in both frontend and backend."
 msgstr ""
 
-#: page-aboutme.php:140
+#: page-aboutme.php:77
 msgid "Working with JS-based hybrid mobile apps is another promising prospect."
 msgstr ""
 
-#: page-aboutme.php:141
+#: page-aboutme.php:78
 msgid ""
 "I may consider taking some managerial path in the future to use my knowledge "
 "of finance and psychology as well as quench managerial hunger."
 msgstr ""
 
-#: page-aboutme.php:142
-msgid "To see technologies I already know please"
-msgstr ""
-
-#: page-aboutme.php:150
-msgid "click here"
-msgstr ""
-
-#: page-aboutme.php:160
+#: page-aboutme.php:82
 msgid "What are your concerns about the new job?"
 msgstr ""
 
-#: page-aboutme.php:166
+#: page-aboutme.php:84
 msgid ""
 "One of the main concerns is that I might work slower than expected through "
 "lack of production experience, but maybe I underestimate my abilities..."
 msgstr ""
 
-#: page-aboutme.php:167
+#: page-aboutme.php:85
 msgid ""
 "I am a bit afraid of being thrown into thousands of lines of production code "
 "without me having time to figure how things work here. Hope to avoid this "
 "situation."
 msgstr ""
 
-#: page-aboutme.php:176
+#: page-aboutme.php:89
 msgid "What about your personal qualities and overall attitude to work?"
 msgstr ""
 
-#: page-aboutme.php:182
+#: page-aboutme.php:91
 msgid ""
 "I am a person who tends to avoid conflicts and try to collaborate even with "
 "difficult people. I prefer to solve problems constructively making "
 "concessions and expecting others to do the same."
 msgstr ""
 
-#: page-aboutme.php:183
+#: page-aboutme.php:92
 msgid ""
 "I am professional in my attitude to work and cannot let my teammates down."
 msgstr ""
 
-#: page-aboutme.php:184
+#: page-aboutme.php:93
 msgid ""
 "Being a team player at work I love spending time with my family or alone out "
 "of work. Honestly, I don't like noisy parties and crowds of people all the "
 "time. Better learn something new, watch a quality movie or go for a walk."
 msgstr ""
 
-#: page-aboutme.php:185
+#: page-aboutme.php:94
 msgid ""
 "I not only listen to other people, but also hear them. I perceive objective "
 "criticism calmly and think of it as a stimulus to my further growth."
 msgstr ""
 
-#: page-aboutme.php:186
+#: page-aboutme.php:95
 msgid ""
 "However, I would love to meet new interesting people, especially IT "
 "professionals, and learn from them, draw inspiration or maybe collaborate on "
@@ -462,37 +410,37 @@ msgid ""
 "afraid of that at all."
 msgstr ""
 
-#: page-aboutme.php:187
+#: page-aboutme.php:96
 msgid ""
 "I love systems, ordered and working like a clock. I would be glad to join a "
 "company where management is based on well-working systems."
 msgstr ""
 
-#: page-aboutme.php:196
+#: page-aboutme.php:101
 msgid "Do you have hobbies?"
 msgstr ""
 
-#: page-aboutme.php:202
+#: page-aboutme.php:103
 msgid ""
 "I love politics, but since Belarus is an authoritarian country and politics "
 "actually does not exist here, I have \"put aside\" politological stuff until "
 "better times."
 msgstr ""
 
-#: page-aboutme.php:203
+#: page-aboutme.php:104
 msgid ""
 "I love Sweden and Nordic countries for their attitude to life and calmness. "
 "I have lived in Sweden for about nine months and fell in love with it. Maybe "
 "I will work or live there once."
 msgstr ""
 
-#: page-aboutme.php:204
+#: page-aboutme.php:105
 msgid ""
 "My other interest lies in football, but I don't watch it much, only a bit of "
 "Bundesliga and English Premier League."
 msgstr ""
 
-#: page-aboutme.php:205
+#: page-aboutme.php:106
 msgid ""
 "Maybe a bit weird to call it a hobby, but I love taking an English Longman "
 "dictionary and just learning new words and phrases. Having a decent level of "
@@ -500,7 +448,7 @@ msgid ""
 "like a native speaker."
 msgstr ""
 
-#: page-aboutme.php:206
+#: page-aboutme.php:107
 msgid ""
 "Another quirky and seemingly unrealistic idea is to create a real-life "
 "political simulator, including with online features, in which you would "
@@ -511,24 +459,24 @@ msgid ""
 "statements and behind-the-scenes intrigues."
 msgstr ""
 
-#: page-aboutme.php:207
+#: page-aboutme.php:108
 msgid "I drink a lot of coffee and tea, often with something sweet :)"
 msgstr ""
 
-#: page-aboutme.php:216
+#: page-aboutme.php:112
 msgid "What technologies will you study in the future?"
 msgstr ""
 
-#: page-aboutme.php:222
+#: page-aboutme.php:114
 msgid ""
 "Please see the list of skills I plan to acquire in the future, near or far:"
 msgstr ""
 
-#: page-aboutme.php:229
+#: page-aboutme.php:121
 msgid "Future skills"
 msgstr ""
 
-#: page-aboutme.php:230
+#: page-aboutme.php:122
 msgid ""
 "I watch numerous YouTube channels to follow the trending technologies and "
 "webdev news. If I see that a technology is getting more and more popular and "
@@ -668,6 +616,14 @@ msgstr ""
 
 #: page-home.php:147
 msgid "Most of works were created for practice and demonstration"
+msgstr ""
+
+#: page-home.php:172
+msgid "Small examples"
+msgstr ""
+
+#: page-home.php:184
+msgid "See live"
 msgstr ""
 
 #: page-home.php:197

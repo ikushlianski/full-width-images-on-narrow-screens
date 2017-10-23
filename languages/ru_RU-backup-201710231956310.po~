@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-10-23 19:56+0000\n"
+"PO-Revision-Date: 2017-10-23 18:55+0000\n"
 "Last-Translator: ilyaonline <kushliansky@gmail.com>\n"
 "Language-Team: Russian\n"
 "Language: ru-RU\n"
@@ -171,16 +171,13 @@ msgstr "нажмите здесь"
 
 #: page-aboutme.php:160
 msgid "What are your concerns about the new job?"
-msgstr "Есть ли какие-либо опасения по поводу новой работы?"
+msgstr ""
 
 #: page-aboutme.php:166
 msgid ""
 "One of the main concerns is that I might work slower than expected through "
 "lack of production experience, but maybe I underestimate my abilities..."
 msgstr ""
-"Одна из основных возможных проблем заключается в том, что я могу работать "
-"медленнее, чем ожидалось, из-за отсутствия опыта на продакшене, но, возможно,"
-" я недооцениваю свои способности и всё будет хорошо."
 
 #: page-aboutme.php:167
 msgid ""
@@ -188,14 +185,10 @@ msgid ""
 "without me having time to figure how things work here. Hope to avoid this "
 "situation."
 msgstr ""
-"Я немного боюсь, что столкнусь с ситуацией, когда передо мной будут тысячи "
-"строк продакшн-кода, в котором у меня не будет достаточно времени "
-"разобраться. Надеюсь избежать этой ситуации. Чтение чужого кода для меня "
-"может быть волнительной процедурой."
 
 #: page-aboutme.php:176
 msgid "What about your personal qualities and overall attitude to work?"
-msgstr "Что ты можешь рассказать о характере и отношении к работе?"
+msgstr ""
 
 #: page-aboutme.php:182
 msgid ""
@@ -203,20 +196,11 @@ msgid ""
 "difficult people. I prefer to solve problems constructively making "
 "concessions and expecting others to do the same."
 msgstr ""
-"Я человек, который стремится избежать конфликтов и пытается быть со всеми "
-"нейтральным. Я понимаю, что каждый человек хорош по-своему. Часто на "
-"предыдущих работах получалось так, что ко мне приходили советоваться люди из "
-"\"противоположных лагерей\". В целом предпочитаю решать проблемы "
-"конструктивно, делая уступки и ожидая, что другие сделают то же самое."
 
 #: page-aboutme.php:183
 msgid ""
 "I am professional in my attitude to work and cannot let my teammates down."
 msgstr ""
-"У меня профессиональный подход к любой работе. Я никогда не позволю себе "
-"подвести команду, даже если для этого надо пожертвовать личным временем. Я "
-"также понимаю такое явление, как переработки, однако в строго определенных "
-"здравым смыслом количествах."
 
 #: page-aboutme.php:184
 msgid ""
@@ -224,19 +208,12 @@ msgid ""
 "of work. Honestly, I don't like noisy parties and crowds of people all the "
 "time. Better learn something new, watch a quality movie or go for a walk."
 msgstr ""
-"Являясь командным игроком на работе, в нерабочее время я люблю проводить "
-"время с семьей или наедине сам с собой. Честно говоря, мне не нравятся "
-"шумные вечеринки и толпы людей. Лучше потратить время на что-то новое, "
-"посмотреть качественный фильм или выйти наконец на воздух :)"
 
 #: page-aboutme.php:185
 msgid ""
 "I not only listen to other people, but also hear them. I perceive objective "
 "criticism calmly and think of it as a stimulus to my further growth."
 msgstr ""
-"Я умею не просто слушать людей, но и слышать их, тонко чувствую людей. Также "
-"положительно отношусь к объективной критике: она является для меня мощным "
-"стимулом к развитию."
 
 #: page-aboutme.php:186
 msgid ""
@@ -245,11 +222,6 @@ msgid ""
 "some new projects. Speaking in public is one of my strong points, I am not "
 "afraid of that at all."
 msgstr ""
-"Несмотря на некую интровертность, мне бы хотелось встретить в новой для себя "
-"профессии новых интересных людей, особенно ИТ-специалистов, учиться у них, "
-"черпать вдохновение или, возможно, сотрудничать в проектах. Кстати, в "
-"противовес интровертности, я не боюсь выступать на публике, в том числе "
-"перед иностранной."
 
 #: page-aboutme.php:203
 msgid ""
@@ -257,17 +229,12 @@ msgid ""
 "I have lived in Sweden for about nine months and fell in love with it. Maybe "
 "I will work or live there once."
 msgstr ""
-"Я люблю Швецию и вообще северные страны за их отношение к жизни и "
-"спокойствие. Я прожил в Швеции около девяти месяцев и просто влюбился в эту "
-"страну. Возможно когда-нибудь я буду там работать или жить."
 
 #: page-aboutme.php:204
 msgid ""
 "My other interest lies in football, but I don't watch it much, only a bit of "
 "Bundesliga and English Premier League."
 msgstr ""
-"Помимо этого интересуюсь футболом (немецкий и английский), но много смотреть "
-"нет времени.  Люблю качественный юмор"
 
 #: page-aboutme.php:205
 msgid ""
@@ -276,9 +243,6 @@ msgid ""
 "English now, I do hope I will once be able to come close to speaking English "
 "like a native speaker."
 msgstr ""
-"Также хочу и далее повышать уровень английского до уровня native speaker. "
-"Иногда шучу, что если бы было больше времени, сидел бы за англо-английским "
-"словарём в поисках новых аутентичных слов и выражений."
 
 #: page-aboutme.php:206
 msgid ""
@@ -290,28 +254,23 @@ msgid ""
 "against opponents and improvement of life in your country via talks, "
 "statements and behind-the-scenes intrigues."
 msgstr ""
-"Еще хотелось бы когда-нибудь создать политический симулятор, возможно с "
-"мультиплеером, по типу Football Manager. Это будет симулятор, в котором "
-"фокус не на шаблонном захвате чужих территорий и усилении армии, а на "
-"приходе к власти, на работе с оппонентами, переговорах, кулуарной борьбе и т."
-"д."
 
 #: page-aboutme.php:207
 msgid "I drink a lot of coffee and tea, often with something sweet :)"
-msgstr "Пью много кофе и чая, часто с чем-нибудь сладеньким :)"
+msgstr ""
 
 #: page-aboutme.php:216
 msgid "What technologies will you study in the future?"
-msgstr "Какие технологии планируешь изучать в будущем?"
+msgstr ""
 
 #: page-aboutme.php:222
 msgid ""
 "Please see the list of skills I plan to acquire in the future, near or far:"
-msgstr "Вот список навыков, которыми я намерен овладеть в будущем:"
+msgstr ""
 
 #: page-aboutme.php:229
 msgid "Future skills"
-msgstr "Будущие навыки"
+msgstr ""
 
 #: page-aboutme.php:230
 msgid ""
@@ -321,10 +280,6 @@ msgid ""
 "absolutely need this technology and monitor the local job market to make the "
 "final decision."
 msgstr ""
-"Я смотрю многочисленные Youtube-каналы, чтобы оставаться в тренде по новым и "
-"существующим технологиям. Если вижу, что та или иная технология становится "
-"всё популярнее, в том числе востребованность в Беларуси растёт и сочетается "
-"с уже существующими навыками, я скорее всего буду её изучать."
 
 #. Name of the template
 msgid "Ilya Online Contacts Page"

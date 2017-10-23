@@ -44,7 +44,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="section about-shortly-wrapper">
 				<div class="subsection all-skills">
-					<h3 class="header"><?php _e('Skills', 'ilyaonline') ?></h3>
+					<h3 id="current-skills" class="header"><?php _e('Skills', 'ilyaonline') ?></h3>
 					<p class="skill_rel_level"><?php _e('As of junior level', 'ilyaonline') ?></p>
 					<div class="skills-list">
 						<?php
@@ -59,8 +59,7 @@ get_header(); ?>
 							$args = array(
 								'post_type' => 'skills',
 								'posts_per_page' => 4,
-								'orderby' => 'menu_order',
-								'order' => 'ASC',
+								'orderby' => ['menu_order'=> 'DESC'],
 								'tax_query' => array(
 									array(
 										'taxonomy' => 'skill_tag',
@@ -71,8 +70,7 @@ get_header(); ?>
 							);
 							if ($termID == 250 || $termID == 252) {
 								$args['meta_key']	= 'skill_completion_status';
-								$args['orderby']  = 'meta_value';
-								$args['order']    = 'DESC';
+								$args['orderby']  = ['meta_value'=>'DESC', 'menu_order'=>'DESC'];
 							}
 							$currentlyViewedSkillLoop = new WP_Query( $args );
 							if ( $currentlyViewedSkillLoop->have_posts() ) : ?>
@@ -113,7 +111,7 @@ get_header(); ?>
 					<div class="why-me-list-wrapper_secondary">
 						<li class="why-me-reason item-secondary"><?php _e('Having freelance experience, I always care about what clients want', 'ilyaonline')?></li>
 						<li class="why-me-reason item-secondary"><?php _e('I look at your business as if it was mine and try to find ways to streamline processes', 'ilyaonline')?></li>
-						<li class="why-me-reason item-secondary"><?php _e('Self-taught, I believe that you can achieve what you want if you work hard', 'ilyaonline')?></li>
+						<li class="why-me-reason item-secondary"><?php _e('Self-taught, I believe you can achieve what you want if you work hard', 'ilyaonline')?></li>
 					</div>
 				</ul>
 				<a href="<?php

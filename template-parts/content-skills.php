@@ -33,25 +33,7 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ilyaonline' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ilyaonline' ),
-				'after'  => '</div>',
-			) );
-		?>
 		<?php	if ( get_field('skill_notice') ) : ?>
 			<div class="skill-notice alert alert-warning" role="alert">
 				<b><?php pll_e('Notice')?>:</b> <?php the_field('skill_notice'); ?>

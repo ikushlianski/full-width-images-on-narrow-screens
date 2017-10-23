@@ -1,7 +1,5 @@
 .questions_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
   & .aboutMeBlock {
     display: flex;
@@ -33,7 +31,7 @@
         text-decoration: underline;
       }
     }
-    &:nth-child(5n+1) {
+    &:nth-child(5n+2) {
       & .aboutMeQuestion {
         background-color: darken(transparentize(red, 0.3), 10%);
         color: $color__background-screen;
@@ -45,7 +43,7 @@
         color: $color__background-screen;
       }
     }
-    &:nth-child(5n+2) {
+    &:nth-child(5n+1) {
       & .aboutMeQuestion {
         background-color: darken(transparentize(orange, 0.1), 9%);
         color: $color__background-screen;
@@ -58,7 +56,7 @@
         text-shadow: 0.5px 0.5px  grey;
       }
     }
-    &:nth-child(5n+3) {
+    &:nth-child(5n+1) {
       & .aboutMeQuestion {
         background-color: darken(transparentize(green, 0.3), 10%);
         color: $color__background-screen;

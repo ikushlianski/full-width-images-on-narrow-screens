@@ -296,11 +296,24 @@ add_action( 'init', 'my_modify_posts_per_page', 0);
 function my_modify_posts_per_page() {
 	add_filter( 'option_posts_per_page', 'my_option_posts_per_page' );
 }
-function my_option_posts_per_page( $value ) {
+function my_option_posts_per_page( $value )
+{
 	global $option_posts_per_page;
 	if ( is_tax( 'skill_tag') ) {
 		return 1;
+	} elseif (is_post_type_archive('skills')) {
+		return 99;
 	} else {
 		return $option_posts_per_page;
 	}
 }
+
+// sort skills in order of importance
+function homepage_posts($query)
+{
+    if ( $query->is_tax( 'skill_tag') )
+    {
+        $query->set( 'orderby', ['menu_order'=> 'DESC'] );
+    }
+}
+add_action('pre_get_posts', 'homepage_posts');

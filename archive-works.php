@@ -52,17 +52,50 @@ get_header(); ?>
 
 			<?php
 			endwhile;
+			the_posts_navigation();
 			?>
 			</div>
 			<?php
-			the_posts_navigation();
 
 		else :
-
 			get_template_part( 'template-parts/content', 'none' );
-
 		endif; ?>
+			<div class="section portfolio">
+				<?php
+				$args = array(
+					'post_type' => 'smallworks',
+					'posts_per_page' => 6,
+					'orderby' => 'rand',
+					'order' => 'DESC'
+				);
+				$smallWorksLoop = new WP_Query( $args );
+				if ($smallWorksLoop->have_posts()) : ?>
+				<h3 class="header"><?php _e('Small examples', 'ilyaonline')?></h3>
+				<div class="portfolio-items-container smallWorks-container">
+					<?php while( $smallWorksLoop->have_posts() ) : $smallWorksLoop->the_post();
+					?>
+					<div class="portfolio-item smallWork" style="background-image:url(<?php the_field('work_image'); ?>)">
+						<div class="portfolio-item__meta">
+							<a><h4 class="portfolio-item__name"><?php the_title(); ?></h4></a>
+							<div class="portfolio-item__short-desc"><?php the_field('work_short_description'); ?></div>
 
+							<?php	if ( get_field('work_url') ) : ?>
+							<a class="see-project-live-link" target="_blank" href="<?php the_field('work_url'); ?>">
+								<button class="btn btn-success see-project-live" role="button">
+									<?php _e('See live', 'ilyaonline')?>
+									<i class="fa fa-external-link" aria-hidden="true"></i>
+								</button>
+							</a>
+							<?php endif; ?>
+
+						</div>
+					</div>
+					<?php
+					endwhile; wp_reset_postdata();
+					?>
+				</div>
+				<?php endif; ?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

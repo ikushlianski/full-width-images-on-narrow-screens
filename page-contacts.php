@@ -26,7 +26,7 @@ get_header(); ?>
 					<div class="contact-detail">
 						<div class="pre-contact">
 							<div class="name-reminder"><?php _e('Ilya Kushlianski', 'ilyaonline') ?></div>
-							<p><i><?php _e('I want to plunge into the world of the future, the world of the smart and enterprising people, whose income directly depends on their skills and experience.', 'ilyaonline') ?></i></p>
+							<p><i><?php _e('I want to plunge into the world of the future, the world of smart and enterprising people, whose income directly depends on their skills and experience.', 'ilyaonline') ?></i></p>
 						</div>
 						<div class="way-to-contact"><i class="fa fa-2x fa-mobile" aria-hidden="true"></i> +375 29 608 8900</div>
 						<div class="way-to-contact"><i class="fa fa-2x fa-envelope" aria-hidden="true"></i> <a target="_blank" href="mailto:kushliansky@gmail.com">kushliansky@gmail.com</a></div>

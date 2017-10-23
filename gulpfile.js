@@ -41,7 +41,7 @@ gulp.task('scripts', function() {
         }))
 		.pipe(uglify())
 		.pipe(gulp.dest('./__dist/js'))
-		.pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
+		.pipe(browserSync.reload({stream: true})) // Обновляем на странице при изменении
 });
 
 // gulp.task('css-libs', ['sass'], function() {
