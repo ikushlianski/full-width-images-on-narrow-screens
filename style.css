@@ -2202,7 +2202,54 @@ input[type="submit"].submit-message {
   color: #f1f1f1;
   border: none;
   padding: 1em;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-animation: swinging 7s infinite ease-in-out;
+          animation: swinging 7s infinite ease-in-out;
+  -webkit-animation-direction: reverse;
+          animation-direction: reverse; }
+  input[type="submit"].submit-message:hover {
+    -webkit-animation: none;
+            animation: none; }
+
+@-webkit-keyframes swinging {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  3% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
+  6% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); }
+  9% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
+  12% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); }
+  12%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
+
+@keyframes swinging {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  3% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
+  6% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); }
+  9% {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg); }
+  12% {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg); }
+  12%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); } }
 
 .way-to-contact {
   display: -webkit-box;
