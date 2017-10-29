@@ -237,7 +237,7 @@
 	});
 
 
-  $(document).ready(function(){
+  $(window).on("load", function(){
     let thisSkillNowHeight = $('.this-skill-now').height();
     let skillBackgroundWidth = $('.skillBackground').width();
     let skillBackgroundHeight = $('.skillBackground').height();
