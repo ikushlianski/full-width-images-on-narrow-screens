@@ -164,8 +164,7 @@ get_header(); ?>
 	        'post_type' => 'smallworks',
 	        'posts_per_page' => 4,
 	        'meta_key' => 'is_work_significant',
-	        'orderby' => 'meta_value_num',
-	        'order' => 'DESC'
+	        'orderby' => 'rand'
 	      );
 	      $smallWorksLoop = new WP_Query( $args );
 				if ($smallWorksLoop->have_posts()) : ?>

@@ -21,8 +21,8 @@ get_header(); ?>
 		  <div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading1">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
-		          <div><?php _e('Why did you start learning code?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+		          <div class="interviewQuestion"><?php _e('Why did you start learning code?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -39,8 +39,8 @@ get_header(); ?>
 			<div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading2">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
-		          <div><?php _e('Aren\'t you afraid of difficulties in programming?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+		          <div class="interviewQuestion"><?php _e('Aren\'t you afraid of difficulties in programming?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -58,8 +58,8 @@ get_header(); ?>
 			<div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading3">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
-		          <div><?php _e('How do you learn code?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+		          <div class="interviewQuestion"><?php _e('How do you learn code?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -91,8 +91,8 @@ get_header(); ?>
 			<div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading4">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
-		          <div><?php _e('Are you good at maths?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+		          <div class="interviewQuestion"><?php _e('Are you good at maths?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -108,8 +108,8 @@ get_header(); ?>
 			<div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading5">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
-		          <div><?php _e('Do you have work experience?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+		          <div class="interviewQuestion"><?php _e('Do you have work experience?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -135,8 +135,8 @@ get_header(); ?>
 			<div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading6">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
-		          <div><?php _e('What kind of IT job would you prefer?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+		          <div class="interviewQuestion"><?php _e('What kind of IT job would you prefer?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -164,8 +164,8 @@ get_header(); ?>
       <div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading7">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
-		          <div><?php _e('What are your concerns about the new job?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+		          <div class="interviewQuestion"><?php _e('What are your concerns about the new job?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -180,8 +180,8 @@ get_header(); ?>
       <div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading8">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
-		          <div><?php _e('What about your personal qualities and overall attitude to work?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+		          <div class="interviewQuestion"><?php _e('What about your personal qualities and overall attitude to work?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -200,8 +200,8 @@ get_header(); ?>
       <div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading9">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
-		          <div><?php _e('Do you have hobbies?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+		          <div class="interviewQuestion"><?php _e('Do you have hobbies?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -220,8 +220,8 @@ get_header(); ?>
       <div class="panel panel-default">
 		    <div class="panel-heading aboutMeQuestion" role="tab" id="heading10">
 		      <h4 class="panel-title">
-		        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse10" aria-expanded="false" aria-controls="collapse10">
-		          <div><?php _e('What technologies will you study in the future?', 'ilyaonline') ?></div>
+		        <a role="button" data-toggle="collapse"  href="#collapse10" aria-expanded="false" aria-controls="collapse10">
+		          <div class="interviewQuestion"><?php _e('What technologies will you study in the future?', 'ilyaonline') ?></div>
 		        </a>
 		      </h4>
 		    </div>
@@ -240,6 +240,14 @@ get_header(); ?>
 		    </div>
 		  </div>
 		</div>
+    <a href="<?php
+    if (pll_current_language() == "en") :
+      echo get_page_link(1786);
+    endif;
+    if (pll_current_language() == "ru") :
+      echo get_page_link(1788);
+    endif;
+    ?>" class="cta-button cta-button_dark"><?php _e('Contact me', 'ilyaonline') ?></a>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
