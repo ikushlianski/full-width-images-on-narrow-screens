@@ -73,6 +73,18 @@ gulp.task('img', function() {
 		.pipe(gulp.dest('__dist/img')); // Выгружаем на продакшен
 });
 
+gulp.task('img-wp', function() {
+	return gulp.src('../../uploads/**/*.{png,jpg,jpeg}') // Берем все изображения
+		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		})))
+		.pipe(gulp.dest(function(file) {
+    	return file.base;
+  	})); // Выгружаем на продакшен
+});
 
 gulp.task('build', [/*'clean', 'img',*/ 'sass' /*, 'scripts'*/], function() {
 
