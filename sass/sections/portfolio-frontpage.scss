@@ -28,7 +28,7 @@
     background-color: transparentize($color__text-input-focus, 0.5);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     text-shadow: 1px 1px black;
     & a:hover {
       text-decoration: none;
@@ -36,7 +36,7 @@
   }
   &__name {
     font-weight: bold;
-    color: $color__background-hr;
+    color: white;
     border-bottom: 1px solid transparentize($color__accent, 0.3);
     padding-bottom: 0.25em;
   }
@@ -101,16 +101,16 @@
       line-height: normal;
       z-index: 0;
       bottom: 0;
-      background-color: transparentize($color__text-input-focus, 0.4);
+      background-color: transparentize($color__text-input-focus, 0.6);
       // display: none;
     }
     &__name {
       font-weight: bold;
-      color: $color__background-hr;
+      // color: $color__background-hr;
       border-bottom: 1px solid transparentize($color__accent, 0.3);
     }
     &__short-desc {
-      color: $color__background-hr;
+      // color: $color__background-hr;
       font-size: 0.9em;
     }
   }

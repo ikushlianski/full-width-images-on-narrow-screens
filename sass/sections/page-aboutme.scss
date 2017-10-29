@@ -1,5 +1,5 @@
 .questions_wrapper {
-  width: 60%;
+  width: 100%;
   margin: 0 auto;
   & .aboutMeBlock {
     display: flex;
@@ -91,7 +91,20 @@
     }
   }
 }
+.interviewQuestion {
+  display: block;
+  padding: 1em;
+  margin: -1em;
+}
+
+@media (min-width: 500px) {
+  .questions_wrapper {
+    width: 90%;
+  }
+}
 
 @media (min-width: 768px) {
-
+  .questions_wrapper {
+    width: 60%;
+  }
 }

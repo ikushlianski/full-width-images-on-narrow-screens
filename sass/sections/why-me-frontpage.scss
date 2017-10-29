@@ -12,6 +12,18 @@ a.cta-button {
         color: $color__accent-striking;
         border-color: $color__accent-striking;
     }
+    &_dark {
+      border: 1px solid $color__accent;
+      color: $color__accent;
+      &:hover {
+          text-decoration: none;
+          color: $color__text-input-focus;
+          border-color: $color__text-input-focus;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
 }
 
 .section.why-me {

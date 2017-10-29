@@ -16,4 +16,8 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	p & {
+		text-decoration: underline;
+	}
 }
