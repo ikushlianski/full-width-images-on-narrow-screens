@@ -67,8 +67,8 @@
 		<?php endif; ?>
 
 		<div class="tech_and_image">
-		<?php
 
+		<?php
 		$posts = get_field('technologies_involved_in_work');
 		if( $posts ): ?>
 			<div class="tech_wrapper">
@@ -87,8 +87,9 @@
 			</div>
 		<?php wp_reset_postdata(); ?>
 		<?php endif; ?>
-			<img class="work_image" src="<?php the_field('work_image') ?>" alt="">
+
 		</div>
+		<img class="work_image" src="<?php the_field('work_image') ?>" alt="">
 		<?php if (get_field('goals_of_work')) : ?>
 			<div class="panel panel-info">
 				<div class="panel-heading">

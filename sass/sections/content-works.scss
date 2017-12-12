@@ -25,7 +25,14 @@
     }
   }
 }
-.see-project-live-link {
+a.see-project-live-link {
+
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      text-decoration: none;
+    }
 
 }
 
@@ -57,7 +64,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  // position: absolute;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
   color: white;
@@ -68,8 +75,9 @@
 .work_image {
   display: flex;
   flex-basis: 250px;
-  width: 45%;
+  width: 100%;
   flex-grow: 1;
+  margin-bottom: 1em;
 }
 .work-long-description {
     padding: 1em;
@@ -77,9 +85,6 @@
     margin-bottom: 1.5em;
 }
 
-////////////////
-// MEDIA QUERIES
-////////////////
 @media (min-width: 768px) {
   .flexrow {
     display: flex;

@@ -74,6 +74,9 @@ i.fa {
   background-color: transparentize($color__accent, 0.0);
   & .site-info {
     color: $color__background-screen;
+    & .socialLink {
+      color: white;
+    }
   }
 }
 .pre-contact {

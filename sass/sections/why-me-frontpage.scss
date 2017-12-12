@@ -17,7 +17,7 @@ a.cta-button {
       color: $color__accent;
       &:hover {
           text-decoration: none;
-          color: $color__text-input-focus;
+          color: $color__text-input-focus; 
           border-color: $color__text-input-focus;
       }
       &:focus {
