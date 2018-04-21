@@ -243,12 +243,12 @@
     let skillBackgroundHeight = $('.skillBackground').height();
     if (thisSkillNowHeight >= skillBackgroundHeight) {
       if ($('.this-skill-now').width() >= skillBackgroundWidth) {
-        $('.skillBackground').css({
-          "left":`calc(50% - ${skillBackgroundWidth/2}px)`,
-          "left":`-webkit-calc(50% - ${skillBackgroundWidth/2}px)`,
-          "top":`calc(50% - ${skillBackgroundHeight/2}px)`,
-          "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
-        });
+        // $('.skillBackground').css({
+        //   "left":`calc(50% - ${skillBackgroundWidth/2}px)`,
+        //   "left":`-webkit-calc(50% - ${skillBackgroundWidth/2}px)`,
+        //   "top":`calc(50% - ${skillBackgroundHeight/2}px)`,
+        //   "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
+        // });
       } else {
         $('.skillBackground')
         .css(
@@ -257,12 +257,12 @@
         );
         skillBackgroundWidth = $('.skillBackground').width();
         skillBackgroundHeight = $('.skillBackground').height();
-        $('.skillBackground').css({
-          "left":`calc(50% - ${skillBackgroundWidth/2}px)`,
-          "left":`-webkit-calc(50% - ${skillBackgroundWidth/2}px)`,
-          "top":`calc(50% - ${skillBackgroundHeight/2}px)`,
-          "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
-        });
+        // $('.skillBackground').css({
+        //   "left":`calc(50% - ${skillBackgroundWidth/2}px)`,
+        //   "left":`-webkit-calc(50% - ${skillBackgroundWidth/2}px)`,
+        //   "top":`calc(50% - ${skillBackgroundHeight/2}px)`,
+        //   "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
+        // });
       }
     } else {
       $('.skillBackground')
@@ -272,12 +272,12 @@
       );
       skillBackgroundWidth = $('.skillBackground').width();
       skillBackgroundHeight = $('.skillBackground').height();
-      $('.skillBackground').css({
-        "left":`calc(50% - ${skillBackgroundWidth/2}px)`,
-        "left":`-webkit-calc(50% - ${skillBackgroundWidth/2}px)`,
-        "top":`calc(50% - ${skillBackgroundHeight/2}px)`,
-        "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
-      });
+      // $('.skillBackground').css({
+      //   "left":`calc(50% - ${skillBackgroundWidth/2}px)`,
+      //   "left":`-webkit-calc(50% - ${skillBackgroundWidth/2}px)`,
+      //   "top":`calc(50% - ${skillBackgroundHeight/2}px)`,
+      //   "top":`-webkit-calc(50% - ${skillBackgroundHeight/2}px)`
+      // });
     }
     $('.skillBackground').show();
 

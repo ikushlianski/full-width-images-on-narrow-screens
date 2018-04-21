@@ -254,6 +254,7 @@ ul.sub-menu.toggled-on li {
 
 	.main-navigation,
 	.main-navigation.toggled {
+		height: 0;
 		position: relative;
 		min-height: 3.5em;
 		margin: 0 auto;
